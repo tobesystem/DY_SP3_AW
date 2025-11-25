@@ -113,7 +113,7 @@ namespace dayouAWSWh2.UC
 
         private void doAdd()
         {
-            winHostAdd _hostAdd = new winHostAdd(cbCarCode.Text);
+            winHostAdd _hostAdd = new winHostAdd();
             _hostAdd.ShowDialog();
             if (_hostAdd.DialogResult == true)
             {
@@ -132,7 +132,7 @@ namespace dayouAWSWh2.UC
                 //MessageBox.Show(_list[row].PLT);
                 if (MessageBox.Show("선택하신 의장정보 [ " + report_sys_dt + " " +  _hostList[row].CMT_NO + " ]" + " 을(를) 삭제하시겠습니까?", "삭제", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
-                    _items = _hostData.delHost(report_sys_dt, _hostList[row].CMT_NO, _hostList[row].STATUS, cbCarCode.Text);
+                    _items = _hostData.delHost(report_sys_dt, _hostList[row].CMT_NO, _hostList[row].STATUS);
                     if(_items.RESULT == "NG")
                     {
                         MessageBox.Show(_items.MSG);
@@ -157,7 +157,7 @@ namespace dayouAWSWh2.UC
                 string report_sys_dt = _hostList[row].REPORT_SYS_DT.Replace("-", "").Replace(":", "").Replace(" ", "");
 
                 //alc변경 팝업
-                winAlcUpdate _winAlcUpdate = new winAlcUpdate(report_sys_dt, _hostList[row].CMT_NO, _hostList[row].STATUS, cbCarCode.Text);
+                winAlcUpdate _winAlcUpdate = new winAlcUpdate(report_sys_dt, _hostList[row].CMT_NO, _hostList[row].STATUS);
                 if (_winAlcUpdate.ShowDialog() == true)
                 {
                     doSearch();
@@ -174,7 +174,7 @@ namespace dayouAWSWh2.UC
 
             if (MessageBox.Show("출고 진행 하시겠습니까?", "출고", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
-                _items = _hostData.outHost(cbCarCode.Text);
+                _items = _hostData.outHost();
 
                 if(_items.RESULT == "NG")
                 {
@@ -233,7 +233,7 @@ namespace dayouAWSWh2.UC
             }
             if (MessageBox.Show("지정 갯수 출고를 진행 하시겠습니까?", "출고", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
-                _items = _hostData.outCntHost(Convert.ToInt32(txtSkidCnt.Text), cbCarCode.Text);
+                _items = _hostData.outCntHost(Convert.ToInt32(txtSkidCnt.Text));
                 if(_items.RESULT == "NG")
                 {
                     MessageBox.Show(_items.MSG);

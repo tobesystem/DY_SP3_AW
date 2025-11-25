@@ -53,7 +53,7 @@ namespace dayouAWSWh2
             _alarmTimer.Tick += alarmTimer_Tick;
             _alarmTimer.Start();
 
-            AddTab("출고 진행 현황", new ucWmsOutTab());
+            AddTab("출고 진행 현황", new ucWmsOut());
             txtUser.Text = Properties.Settings.Default.USER_NAME;
         }
 
@@ -91,7 +91,7 @@ namespace dayouAWSWh2
 
         private void Setting_Click(object sender, RoutedEventArgs e)
         {
-            AddTab("시스템 설정", new ucSystemSettingTab());
+            AddTab("시스템 설정", new ucSystemSetting());
         }
 
         private void LogOut_Click(object sender, RoutedEventArgs e)
@@ -112,17 +112,17 @@ namespace dayouAWSWh2
 
         private void InOutBtn(object sender, RoutedEventArgs e)
         {
-            AddTab("입출고 진행 현황", new ucWmsInOutGetTab());
+            AddTab("입출고 진행 현황", new ucWmsInOutGet());
         }
 
         private void InBtn(object sender, RoutedEventArgs e)
         {
-            AddTab("입고 진행 현황", new ucWmsInTab());
+            AddTab("입고 진행 현황", new ucWmsIn());
         }
 
         private void OutBtn(object sender, RoutedEventArgs e)
         {
-            AddTab("출고 진행 현황", new ucWmsOutTab());
+            AddTab("출고 진행 현황", new ucWmsOut());
         }
 
         private void ManageBtn(object sender, RoutedEventArgs e)
@@ -209,7 +209,7 @@ namespace dayouAWSWh2
 
         private void HostOutBtn(object sender, RoutedEventArgs e)
         {
-            AddTab("의장 출고 내역", new ucHostOutTab());
+            AddTab("의장 출고 내역", new ucHostOut());
         }
 
         private void ProdResultBtn(object sender, RoutedEventArgs e)

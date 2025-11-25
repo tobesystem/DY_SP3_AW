@@ -22,7 +22,7 @@ namespace dayouAWSWh2.Data
         }
 
         
-        public cPalletItemList getPalletList(string plt_code, string carCode)
+        public cPalletItemList getPalletList(string plt_code)
         {
             cPalletItemList _list = new cPalletItemList();
 
@@ -30,15 +30,7 @@ namespace dayouAWSWh2.Data
             {
                 using (SqlConnection connect = new SqlConnection(_conn))
                 {
-                    SqlCommand cmd = connect.CreateCommand();
-                    if (carCode == "SW")
-                    {
-                        cmd = new SqlCommand("SP_CS_PALLET_GET", connect);
-                    }
-                    else if(carCode == "SP3")
-                    {
-                        cmd = new SqlCommand("SP_CS_PALLET_GET_WH2", connect);
-                    }
+                    SqlCommand cmd = new SqlCommand("SP_CS_PALLET_GET", connect);
 
                     cmd.Parameters.Add(new SqlParameter("PLT_CODE", plt_code));
                   
@@ -111,7 +103,7 @@ namespace dayouAWSWh2.Data
             return _list;
         }
 
-        public cMessage updatePallet(string pallet_cd, string pallet_nm, string bad_code, string keyword, string carCode)
+        public cMessage updatePallet(string pallet_cd, string pallet_nm, string bad_code, string keyword)
         {
             cMessage _items = new cMessage();
 
@@ -119,15 +111,8 @@ namespace dayouAWSWh2.Data
             {
                 using (SqlConnection connect = new SqlConnection(_conn))
                 {
-                    SqlCommand cmd = connect.CreateCommand();
-
-                    if(carCode == "SW")
-                    {
-                        cmd = new SqlCommand("SP_CS_PALLET_ADD_EDIT", connect);
-                    }else if(carCode == "SP3")
-                    {
-                        cmd = new SqlCommand("SP_CS_PALLET_ADD_EDIT_WH2", connect);
-                    }
+                    SqlCommand cmd = new SqlCommand("SP_CS_PALLET_ADD_EDIT", connect);
+                   
                     cmd.Parameters.Add(new SqlParameter("PALLETCD", pallet_cd));
                     cmd.Parameters.Add(new SqlParameter("PALLETNM", pallet_nm));
                     cmd.Parameters.Add(new SqlParameter("BADCODE", bad_code));
@@ -160,7 +145,7 @@ namespace dayouAWSWh2.Data
             return _items;
         }
 
-        public cMessage deletePallet(string pallet_cd, string carCode)
+        public cMessage deletePallet(string pallet_cd)
         {
             cMessage _items = new cMessage();
 
@@ -168,15 +153,7 @@ namespace dayouAWSWh2.Data
             {
                 using (SqlConnection connect = new SqlConnection(_conn))
                 {
-                    SqlCommand cmd = connect.CreateCommand();
-
-                    if (carCode == "SW")
-                    {
-                       cmd = new SqlCommand("SP_CS_PALLET_DEL", connect);
-                    }else if(carCode == "SP3")
-                    {
-                       cmd = new SqlCommand("SP_CS_PALLET_DEL_WH2", connect);
-                    }
+                    SqlCommand cmd = new SqlCommand("SP_CS_PALLET_DEL", connect);
 
                     cmd.Parameters.Add(new SqlParameter("PALLETCD", pallet_cd));
 

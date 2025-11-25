@@ -72,7 +72,7 @@ namespace dayouAWSWh2.UC
             dataGrid1.ItemsSource = _manualList;
 
             _manualSubList.Clear();
-            _manualSubList = _data.getManualOutSubList(cbCarCode.Text);
+            _manualSubList = _data.getManualOutSubList();
             dataGrid2.ItemsSource = _manualSubList;
         }
 
@@ -86,7 +86,7 @@ namespace dayouAWSWh2.UC
                 //MessageBox.Show(_list[row].PLT);
                 if (MessageBox.Show("[ " + _manualList[row].ALC_CODE + " ]" + " 을(를) 출고하시겠습니까?", "출고", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
-                    _data.ManualOutAdd(_manualList[row].ALC_CODE, cbCarCode.Text);
+                    _data.ManualOutAdd(_manualList[row].ALC_CODE);
 
                     doSearch();
                 }
@@ -104,7 +104,7 @@ namespace dayouAWSWh2.UC
 
             if (MessageBox.Show("출고 진행 하시겠습니까?", "출고", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
-                _data.ManualAllOutAdd(cbCarCode.Text);
+                _data.ManualAllOutAdd();
 
                 doSearch();
             }
@@ -123,7 +123,7 @@ namespace dayouAWSWh2.UC
                 if (MessageBox.Show("삭제 진행 하시겠습니까?", "출고", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
 
-                    _data.OutDel(_manualSubList[row].ID_CODE, cbCarCode.Text);
+                    _data.OutDel(_manualSubList[row].ID_CODE);
                     doSearch();
                 }
                 else

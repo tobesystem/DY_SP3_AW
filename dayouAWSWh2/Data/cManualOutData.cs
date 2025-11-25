@@ -51,7 +51,7 @@ namespace dayouAWSWh2.Data
                             ALC_CLASS = row["ALC_CLASS"].ToString(),
                             ALC_TYPE = row["ALC_TYPE"].ToString(),
                             FR_CNT = Convert.ToInt32(row["FR_CNT"]),
-                            R2_CNT = Convert.ToInt32(row["R2_CNT"]),
+                            RR_CNT = Convert.ToInt32(row["RR_CNT"]),
                             R3_CNT = Convert.ToInt32(row["R3_CNT"]),
                             //SUM = Convert.ToInt32(row["SUM"]),
                         });
@@ -67,7 +67,7 @@ namespace dayouAWSWh2.Data
         }
 
         //수동 서열출고 전체 
-        public cManualOutItemList getManualOutSubList(string carCode)
+        public cManualOutItemList getManualOutSubList()
         {
             cManualOutItemList _list = new cManualOutItemList();
 
@@ -75,15 +75,7 @@ namespace dayouAWSWh2.Data
             {
                 using (SqlConnection connect = new SqlConnection(_conn))
                 {
-                    SqlCommand cmd = connect.CreateCommand();
-                    if (carCode == "SW")
-                    {
-                        cmd = new SqlCommand("SP_CS_MANUAL_OUT_DETAIL", connect);
-                    }
-                    else if(carCode == "SP3")
-                    {
-                        cmd = new SqlCommand("SP_CS_MANUAL_OUT_DETAIL_WH2", connect);
-                    }
+                    SqlCommand cmd = new SqlCommand("SP_CS_MANUAL_OUT_DETAIL", connect);
 
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
@@ -120,7 +112,7 @@ namespace dayouAWSWh2.Data
             return _list;
         }
 
-        public cManualOutItemList ManualOutAdd(string alc_code, string carCode)
+        public cManualOutItemList ManualOutAdd(string alc_code)
         {
             cManualOutItemList _list = new cManualOutItemList();
 
@@ -128,15 +120,7 @@ namespace dayouAWSWh2.Data
             {
                 using (SqlConnection connect = new SqlConnection(_conn))
                 {
-                    SqlCommand cmd = connect.CreateCommand();
-                    if (carCode == "SW")
-                    {
-                        cmd = new SqlCommand("SP_WMS_OUT_TMP_MANUAL_ORDER_ADD", connect);
-                    }
-                    else if (carCode == "SP3")
-                    {
-                        cmd = new SqlCommand("SP_WMS_OUT_TMP_MANUAL_ORDER_ADD_WH2", connect);
-                    }
+                    SqlCommand cmd = new SqlCommand("SP_WMS_OUT_TMP_MANUAL_ORDER_ADD", connect);
 
                     cmd.Parameters.Add(new SqlParameter("ALC_CODE", alc_code));
 
@@ -167,7 +151,7 @@ namespace dayouAWSWh2.Data
             return _list;
         }
 
-        public cManualOutItemList ManualAllOutAdd(string carCode)
+        public cManualOutItemList ManualAllOutAdd()
         {
             cManualOutItemList _list = new cManualOutItemList();
 
@@ -175,15 +159,7 @@ namespace dayouAWSWh2.Data
             {
                 using (SqlConnection connect = new SqlConnection(_conn))
                 {
-                    SqlCommand cmd = connect.CreateCommand();
-                    if (carCode == "SW")
-                    {
-                        cmd = new SqlCommand("SP_WMS_OUT_MANUAL_ORDER_CREATE", connect);
-                    }
-                    else if (carCode == "SP3")
-                    {
-                        cmd = new SqlCommand("SP_WMS_OUT_MANUAL_ORDER_CREATE_WH2", connect);
-                    }
+                    SqlCommand cmd = new SqlCommand("SP_WMS_OUT_MANUAL_ORDER_CREATE", connect);
 
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
@@ -206,7 +182,7 @@ namespace dayouAWSWh2.Data
         }
 
         //출고 취소
-        public cMessage OutDel(string id_code, string carCode)
+        public cMessage OutDel(string id_code)
         {
             cMessage _items = new cMessage();
 
@@ -214,15 +190,7 @@ namespace dayouAWSWh2.Data
             {
                 using (SqlConnection connect = new SqlConnection(_conn))
                 {
-                    SqlCommand cmd = connect.CreateCommand();
-                    if (carCode == "SW")
-                    {
-                        cmd = new SqlCommand("SP_WMS_OUT_TMP_MANUAL_ORDER_DEL", connect);
-                    }
-                    else if (carCode == "SP3")
-                    {
-                        cmd = new SqlCommand("SP_WMS_OUT_TMP_MANUAL_ORDER_DEL_WH2", connect);
-                    }
+                    SqlCommand cmd = new SqlCommand("SP_WMS_OUT_TMP_MANUAL_ORDER_DEL", connect);
 
                     cmd.Parameters.Add(new SqlParameter("ID_CODE", id_code));
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;

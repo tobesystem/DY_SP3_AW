@@ -31,7 +31,7 @@ namespace dayouAWSWh2.View
         private cMessage _message = new cMessage();
         private string _carCode = "";
 
-        public winPalletPopup(string pallet_code, string pallet_nm, string bad_code ,string header_name,string type, string carCode)
+        public winPalletPopup(string pallet_code, string pallet_nm, string bad_code ,string header_name,string type)
         {
             InitializeComponent();
             _palletCode = pallet_code;
@@ -39,7 +39,6 @@ namespace dayouAWSWh2.View
             _badCode = bad_code;
             _headerName = header_name;
             _type = type;
-            _carCode = carCode;
             Init();
         }
 
@@ -74,7 +73,7 @@ namespace dayouAWSWh2.View
             if(_type == "0")
             {
                 //수정
-                _message =_palletData.updatePallet(txtPalletCode.Text, cbGbn.Text == "REAR" ? "R" : "F", cbBadPallet.Text, "U", _carCode);
+                _message =_palletData.updatePallet(txtPalletCode.Text, cbGbn.Text == "REAR" ? "R" : "F", cbBadPallet.Text, "U");
                 if(_message.RESULT == "NG")
                 {
                     MessageBox.Show(_message.MSG);
@@ -85,7 +84,7 @@ namespace dayouAWSWh2.View
             else
             {
                 //추가
-                _message = _palletData.updatePallet(txtPalletCode.Text, cbGbn.Text == "REAR" ? "R" : "F", cbBadPallet.Text, "I", _carCode);
+                _message = _palletData.updatePallet(txtPalletCode.Text, cbGbn.Text == "REAR" ? "R" : "F", cbBadPallet.Text, "I");
                 if (_message.RESULT == "NG")
                 {
                     MessageBox.Show(_message.MSG);

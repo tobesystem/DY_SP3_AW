@@ -24,7 +24,7 @@ namespace dayouAWSWh2.Class
         public string LOAD_CODE { get; set; }
         public string ID_CODE { get; set; }
         public int FR_CNT { get; set; }
-        public int R2_CNT { get; set; }
+        public int RR_CNT { get; set; }
         public int R3_CNT { get; set; }
     }
 }
