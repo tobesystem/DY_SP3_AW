@@ -85,7 +85,7 @@ namespace dayouAWSWh2.UC
 
         private void doSearch()
         {
-            _hostList = _hostData.getHostResultList(DatePicker1.Text + " " + timeTextBox.Text, DatePicker2.Text + " " + timeTextBox2.Text, DatePicker3.Text.Replace("-", "") + timeTextBox3.Text.Replace(":", ""), DatePicker4.Text.Replace("-", "") + timeTextBox4.Text.Replace(":", ""), txtAlcCode.Text, cbCarCode.Text == "전체" ? "" : cbCarCode.Text, txtBodyNo.Text, txtCommit.Text, cbStatus.Text == "전체" ? "" : cbStatus.Text, cbCarCode.Text);
+            _hostList = _hostData.getHostResultList(DatePicker1.Text + " " + timeTextBox.Text, DatePicker2.Text + " " + timeTextBox2.Text, DatePicker3.Text.Replace("-", "") + timeTextBox3.Text.Replace(":", ""), DatePicker4.Text.Replace("-", "") + timeTextBox4.Text.Replace(":", ""), txtAlcCode.Text, cbCarCode.Text == "전체" ? "" : cbCarCode.Text, txtBodyNo.Text, txtCommit.Text, cbStatus.Text == "전체" ? "" : cbStatus.Text);
             hostResultDataGrid.ItemsSource = _hostList;
             //_hostList = _stockData.getHostResultList(DatePicker1.Text + " " + timeTextBox.Text, DatePicker2.Text + " " + timeTextBox2.Text, txtAlc.Text, cbCarCode.Text == "전체" ? "" : cbCarCode.Text, txtLotNo.Text, txtCommit.Text, DatePicker3.Text.Replace("-", "") + timeTextBox3.Text.Replace(":", ""), DatePicker4.Text.Replace("-", "") + timeTextBox4.Text.Replace(":", ""), cbStatus.Text == "전체" ? "" : cbStatus.Text);
             //hostResultDataGrid.ItemsSource = _hostList;

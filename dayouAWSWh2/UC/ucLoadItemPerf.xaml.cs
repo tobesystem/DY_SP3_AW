@@ -72,7 +72,7 @@ namespace dayouAWSWh2.UC
 
         private void doSearch()
         {
-            _loadList = _stockData.getLoadItemPerfList(DatePicker1.Text + " " + timeTextBox.Text, DatePicker2.Text + " " + timeTextBox2.Text, txtAlc.Text, cbCarCode.Text);
+            _loadList = _stockData.getLoadItemPerfList(DatePicker1.Text + " " + timeTextBox.Text, DatePicker2.Text + " " + timeTextBox2.Text, txtAlc.Text);
             loadPerfDataGrid.ItemsSource = _loadList;
         }
 

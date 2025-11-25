@@ -30,15 +30,8 @@ namespace dayouAWSWh2.Data
             {
                 using (SqlConnection connect = new SqlConnection(_conn))
                 {
-                    SqlCommand cmd = connect.CreateCommand();
-                    if (_alcClass == "SW")
-                    {
-                        cmd = new SqlCommand("SP_CS_HOST_LIST_GET", connect);
-                    }
-                    else if (_alcClass == "SP3")
-                    {
-                        cmd = new SqlCommand("SP_CS_HOST_LIST_GET_WH2", connect);
-                    }
+                    SqlCommand cmd = new SqlCommand("SP_CS_HOST_LIST_GET", connect);
+                   
                     cmd.Parameters.Add(new SqlParameter("ALC_CLASS", _alcClass));
                     cmd.Parameters.Add(new SqlParameter("ALC_CODE", _alcCode));
                     cmd.Parameters.Add(new SqlParameter("BODY_NO", _bodyNo));
@@ -88,7 +81,7 @@ namespace dayouAWSWh2.Data
         }
 
         //의장 실적 조회
-        public cHostItemList getHostResultList(string date1, string date2, string date3, string date4, string alc_code, string alc_class, string body_no,string _cmtNo, string _status, string carCode)
+        public cHostItemList getHostResultList(string date1, string date2, string date3, string date4, string alc_code, string alc_class, string body_no,string _cmtNo, string _status)
         {
             cHostItemList _list = new cHostItemList();
 
@@ -96,15 +89,7 @@ namespace dayouAWSWh2.Data
             {
                 using (SqlConnection connect = new SqlConnection(_conn))
                 {
-                    SqlCommand cmd = connect.CreateCommand();
-                    if (carCode == "SW")
-                    {
-                        cmd = new SqlCommand("SP_CS_HOST_RESULT_GET", connect);
-                    }
-                    else if (carCode == "SP3")
-                    {
-                        cmd = new SqlCommand("SP_CS_HOST_RESULT_GET_WH2", connect);
-                    }
+                    SqlCommand cmd = new SqlCommand("SP_CS_HOST_RESULT_GET", connect);
 
                     cmd.Parameters.Add(new SqlParameter("COMP_START_DATETIME", date1));
                     cmd.Parameters.Add(new SqlParameter("COMP_STOP_DATETIME", date2));
@@ -253,7 +238,7 @@ namespace dayouAWSWh2.Data
         }
 
         //의장 삭제
-        public cMessage delHost(string sys_dt, string cmt_no, string status, string carCode)
+        public cMessage delHost(string sys_dt, string cmt_no, string status)
         {
             cMessage _items = new cMessage();
 
@@ -261,15 +246,7 @@ namespace dayouAWSWh2.Data
             {
                 using (SqlConnection connect = new SqlConnection(_conn))
                 {
-                    SqlCommand cmd = connect.CreateCommand();
-                    if (carCode == "SW")
-                    {
-                        cmd = new SqlCommand("SP_CS_HOST_LIST_DEL", connect);
-                    }
-                    else if (carCode == "SP3")
-                    {
-                        cmd = new SqlCommand("SP_CS_HOST_LIST_DEL_WH2", connect);
-                    }
+                    SqlCommand cmd = new SqlCommand("SP_CS_HOST_LIST_DEL", connect);
 
                     cmd.Parameters.Add(new SqlParameter("REPORT_SYS_DT", sys_dt));
                     cmd.Parameters.Add(new SqlParameter("CMT_NO", cmt_no));
@@ -298,7 +275,7 @@ namespace dayouAWSWh2.Data
         }
 
         //의장 출고
-        public cMessage outHost(string carCode)
+        public cMessage outHost()
         {
             cMessage _items = new cMessage();
 
@@ -306,15 +283,7 @@ namespace dayouAWSWh2.Data
             {
                 using (SqlConnection connect = new SqlConnection(_conn))
                 {
-                    SqlCommand cmd = connect.CreateCommand();
-                    if (carCode == "SW")
-                    {
-                        cmd = new SqlCommand("SP_CS_CURRENT_HOST_OUT_UPDATE", connect);
-                    }
-                    else if (carCode == "SP3")
-                    {
-                        cmd = new SqlCommand("SP_CS_CURRENT_HOST_OUT_UPDATE_WH2", connect);
-                    }
+                    SqlCommand cmd = new SqlCommand("SP_CS_CURRENT_HOST_OUT_UPDATE", connect);
 
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
@@ -339,7 +308,7 @@ namespace dayouAWSWh2.Data
         }
 
         //의장 ALC 변경
-        public cMessage alcUpdateHost(string sys_dt, string cmt_no, string status, string _alc_code, string carCode)
+        public cMessage alcUpdateHost(string sys_dt, string cmt_no, string status, string _alc_code)
         {
             cMessage _items = new cMessage();
 
@@ -347,15 +316,7 @@ namespace dayouAWSWh2.Data
             {
                 using (SqlConnection connect = new SqlConnection(_conn))
                 {
-                    SqlCommand cmd = connect.CreateCommand();
-                    if (carCode == "SW")
-                    {
-                        cmd = new SqlCommand("SP_CS_HOST_ALC_UPDATE", connect);
-                    }
-                    else if (carCode == "SP3")
-                    {
-                        cmd = new SqlCommand("SP_CS_HOST_ALC_UPDATE_WH2", connect);
-                    }
+                    SqlCommand cmd = new SqlCommand("SP_CS_HOST_ALC_UPDATE", connect);
 
                     cmd.Parameters.Add(new SqlParameter("REPORT_SYS_DT", sys_dt));
                     cmd.Parameters.Add(new SqlParameter("CMT_NO", cmt_no));
@@ -385,7 +346,7 @@ namespace dayouAWSWh2.Data
         }
 
         //의장 정보 추가
-        public cMessage alcAddHost(string sys_dt, string cmt_no, string alc_code, string bodyNo, string region, string nation, string color, string carCode)
+        public cMessage alcAddHost(string sys_dt, string cmt_no, string alc_code, string bodyNo, string region, string nation, string color)
         {
             cMessage _items = new cMessage();
 
@@ -393,15 +354,8 @@ namespace dayouAWSWh2.Data
             {
                 using (SqlConnection connect = new SqlConnection(_conn))
                 {
-                    SqlCommand cmd = connect.CreateCommand();
-                    if (carCode == "SW")
-                    {
-                        cmd = new SqlCommand("SP_CS_HOST_LIST_ADD", connect);
-                    }
-                    else if (carCode == "SP3")
-                    {
-                        cmd = new SqlCommand("SP_CS_HOST_LIST_ADD_WH2", connect);
-                    }
+                    SqlCommand cmd = new SqlCommand("SP_CS_HOST_LIST_ADD", connect);
+                   
                     cmd.Parameters.Add(new SqlParameter("REPORT_SYS_DT", sys_dt));
                     cmd.Parameters.Add(new SqlParameter("CMT_NO", cmt_no));
                     cmd.Parameters.Add(new SqlParameter("ALC_CODE", alc_code));
@@ -433,7 +387,7 @@ namespace dayouAWSWh2.Data
         }
 
         //의장 지정 갯수 출고
-        public cMessage outCntHost(int TARGET_NO, string carCode)
+        public cMessage outCntHost(int TARGET_NO)
         {
             cMessage _items = new cMessage();
 
@@ -441,15 +395,8 @@ namespace dayouAWSWh2.Data
             {
                 using (SqlConnection connect = new SqlConnection(_conn))
                 {
-                    SqlCommand cmd = connect.CreateCommand();
-                    if (carCode == "SW")
-                    {
-                        cmd = new SqlCommand("SP_WMS_OUT_HOST_ORDER_CREATE_TARGETNO", connect);
-                    }
-                    else if (carCode == "SP3")
-                    {
-                        cmd = new SqlCommand("SP_WMS_OUT_HOST_ORDER_CREATE_TARGETNO_WH2", connect);
-                    }
+                    SqlCommand cmd = new SqlCommand("SP_WMS_OUT_HOST_ORDER_CREATE_TARGETNO", connect);
+                   
                     cmd.Parameters.Add(new SqlParameter("TARGET_NO", TARGET_NO));
 
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -472,107 +419,6 @@ namespace dayouAWSWh2.Data
             }
 
             return _items;
-        }
-
-        /// <summary>
-        /// SP3용
-        /// </summary>
-        /// <param name="date1"></param>
-        /// <returns></returns>
-
-        //의장 출고 내역 메인
-        public cHostItemList getHostOutListSP3(string date1)
-        {
-            cHostItemList _list = new cHostItemList();
-
-            try
-            {
-                using (SqlConnection connect = new SqlConnection(_conn))
-                {
-                    SqlCommand cmd = new SqlCommand("SP_CS_HOST_OUT_GET_WH2", connect);
-                    cmd.Parameters.Add(new SqlParameter("SELECT_DATE", date1));
-
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-
-                    connect.Open();
-
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataSet ds = new DataSet();
-
-                    adapter.Fill(ds);
-
-                    DataTable dt = ds.Tables[0];
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        _list.Add(new cHostItem
-                        {
-                            ROW_NUM = row["ROW_NUM"].ToString(),
-                            BR_DATE = row["BR_DATE"].ToString(),
-                            BR_NO = row["BR_NO"].ToString(),
-                            CNT = Convert.ToInt32(row["CNT"]),
-                        });
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-            }
-
-            return _list;
-        }
-
-
-        //의장 출고 내역 서브
-        public cHostItemList getHostOutSubListSP3(string _brNo)
-        {
-            cHostItemList _list = new cHostItemList();
-
-            try
-            {
-                using (SqlConnection connect = new SqlConnection(_conn))
-                {
-                    SqlCommand cmd = new SqlCommand("SP_CS_HOST_OUT_SUB_GET_WH2", connect);
-                    cmd.Parameters.Add(new SqlParameter("BR_NO", _brNo));
-
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-
-                    connect.Open();
-
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataSet ds = new DataSet();
-
-                    adapter.Fill(ds);
-
-                    DataTable dt = ds.Tables[0];
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        _list.Add(new cHostItem
-                        {
-                            ID_SUBIDX = Convert.ToInt32(row["ID_SUBIDX"]),
-                            WMS_OUT_NO = row["WMS_OUT_NO"].ToString(),
-                            COMMIT_NO = row["COMMIT_NO"].ToString(),
-                            ALC_CLASS = row["ALC_CLASS"].ToString(),
-                            ALC_CODE = row["ALC_CODE"].ToString(),
-                            COVER_COLOR = row["COVER_COLOR"].ToString(),
-                            COVER_SET = row["COVER_SET"].ToString(),
-                            REGION = row["REGION"].ToString(),
-                            OUT_DATE = row["OUT_DATE"].ToString(),
-                            IN_DATE = row["IN_DATE"].ToString(),
-                            LOCATION = row["LOCATION"].ToString(),
-                            PLT_CODE = row["PLT_CODE"].ToString(),
-                            FR_GUBUN = row["FR_GUBUN"].ToString(),
-                            BODY_NO = row["BODY_NO"].ToString(),
-                        });
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-            }
-
-            return _list;
         }
        
     }

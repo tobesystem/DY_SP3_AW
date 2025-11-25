@@ -30,14 +30,14 @@ namespace dayouAWSWh2.View
         private string _status;
         private string _carCode;
 
-        public winAlcUpdate(string sys_dt, string cmt_no, string status, string carCode)
+        public winAlcUpdate(string sys_dt, string cmt_no, string status)
         {
             InitializeComponent();
 
             _sysDt = sys_dt;
             _smtNo = cmt_no;
             _status = status;
-            _carCode = carCode;
+           
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
@@ -47,7 +47,7 @@ namespace dayouAWSWh2.View
                 MessageBox.Show("ALC는 9자리를 입력해주세요");
                 return;
             }
-            _items = _hostData.alcUpdateHost(_sysDt, _smtNo, _status, txt1.Text, _carCode);
+            _items = _hostData.alcUpdateHost(_sysDt, _smtNo, _status, txt1.Text);
             MessageBox.Show(_items.MSG);
             this.DialogResult = true;
         }

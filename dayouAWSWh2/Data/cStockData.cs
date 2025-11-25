@@ -388,15 +388,7 @@ namespace dayouAWSWh2.Data
             {
                 using (SqlConnection connect = new SqlConnection(_conn))
                 {
-                    SqlCommand cmd = connect.CreateCommand();
-                    if (kind == "SW")
-                    {
-                        cmd = new SqlCommand("SP_CS_LOAD_PERF_GET", connect);
-                    }
-                    else if (kind == "SP3")
-                    {
-                        cmd = new SqlCommand("SP_CS_LOAD_PERF_GET_WH2", connect);
-                    }
+                    SqlCommand cmd = new SqlCommand("SP_CS_LOAD_PERF_GET", connect);
 
                     cmd.Parameters.Add(new SqlParameter("START_DATE", start_date));
                     cmd.Parameters.Add(new SqlParameter("STOP_DATE", stop_date));
@@ -451,7 +443,7 @@ namespace dayouAWSWh2.Data
         }
 
         //품목별 실적조회
-        public cLoadItemPerfItemList getLoadItemPerfList(string start_date, string stop_date, string load_code, string carCode)
+        public cLoadItemPerfItemList getLoadItemPerfList(string start_date, string stop_date, string load_code)
         {
             cLoadItemPerfItemList _list = new cLoadItemPerfItemList();
 
@@ -459,15 +451,7 @@ namespace dayouAWSWh2.Data
             {
                 using (SqlConnection connect = new SqlConnection(_conn))
                 {
-                    SqlCommand cmd = connect.CreateCommand();
-                    if (carCode == "SW")
-                    {
-                        cmd = new SqlCommand("SP_CS_LOAD_ITEM_PERF_GET", connect);
-                    }
-                    else if (carCode == "SP3")
-                    {
-                        cmd = new SqlCommand("SP_CS_LOAD_ITEM_PERF_GET_WH2", connect);
-                    }
+                    SqlCommand cmd = new SqlCommand("SP_CS_LOAD_ITEM_PERF_GET", connect);
 
                     cmd.Parameters.Add(new SqlParameter("START_DATE", start_date));
                     cmd.Parameters.Add(new SqlParameter("STOP_DATE", stop_date));
@@ -521,7 +505,7 @@ namespace dayouAWSWh2.Data
         }
 
         //입고대 실적조회
-        public cTotalJobItemList getTotalJobList(string start_date, string stop_date, string fr_gbn, string alc_code, string carCode)
+        public cTotalJobItemList getTotalJobList(string start_date, string stop_date, string fr_gbn, string alc_code)
         {
             cTotalJobItemList _list = new cTotalJobItemList();
 
@@ -529,15 +513,7 @@ namespace dayouAWSWh2.Data
             {
                 using (SqlConnection connect = new SqlConnection(_conn))
                 {
-                    SqlCommand cmd = connect.CreateCommand();
-                    if (carCode == "SW")
-                    {
-                        cmd = new SqlCommand("SP_CS_TOTAL_JOB_GET", connect);
-                    }
-                    else if (carCode == "SP3")
-                    {
-                        cmd = new SqlCommand("SP_CS_TOTAL_JOB_GET_WH2", connect);
-                    }
+                    SqlCommand cmd = new SqlCommand("SP_CS_TOTAL_JOB_GET", connect);
 
                     cmd.Parameters.Add(new SqlParameter("START_DATETIME", start_date));
                     cmd.Parameters.Add(new SqlParameter("STOP_DATETIME", stop_date));

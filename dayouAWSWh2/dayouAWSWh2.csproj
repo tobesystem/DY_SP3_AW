@@ -272,12 +272,6 @@
     <Compile Include="UC\ucHostOut.xaml.cs">
       <DependentUpon>ucHostOut.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UC\ucHostOutSP3.xaml.cs">
-      <DependentUpon>ucHostOutSP3.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UC\ucHostOutTab.xaml.cs">
-      <DependentUpon>ucHostOutTab.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UC\ucHostResult.xaml.cs">
       <DependentUpon>ucHostResult.xaml</DependentUpon>
     </Compile>
@@ -317,12 +311,6 @@
     <Compile Include="UC\ucSystemSetting.xaml.cs">
       <DependentUpon>ucSystemSetting.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UC\ucSystemSettingSP3.xaml.cs">
-      <DependentUpon>ucSystemSettingSP3.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UC\ucSystemSettingTab.xaml.cs">
-      <DependentUpon>ucSystemSettingTab.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UC\ucTimeStock.xaml.cs">
       <DependentUpon>ucTimeStock.xaml</DependentUpon>
     </Compile>
@@ -341,32 +329,14 @@
     <Compile Include="UC\ucWmsInOutGet.xaml.cs">
       <DependentUpon>ucWmsInOutGet.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UC\ucWmsInOutGetSP3.xaml.cs">
-      <DependentUpon>ucWmsInOutGetSP3.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UC\ucWmsInOutGetTab.xaml.cs">
-      <DependentUpon>ucWmsInOutGetTab.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UC\ucWmsInResult.xaml.cs">
       <DependentUpon>ucWmsInResult.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UC\ucWmsInSP3.xaml.cs">
-      <DependentUpon>ucWmsInSP3.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UC\ucWmsInTab.xaml.cs">
-      <DependentUpon>ucWmsInTab.xaml</DependentUpon>
     </Compile>
     <Compile Include="UC\ucWmsOut.xaml.cs">
       <DependentUpon>ucWmsOut.xaml</DependentUpon>
     </Compile>
     <Compile Include="UC\ucWmsOutResult.xaml.cs">
       <DependentUpon>ucWmsOutResult.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UC\ucWmsOutSP3.xaml.cs">
-      <DependentUpon>ucWmsOutSP3.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="UC\ucWmsOutTab.xaml.cs">
-      <DependentUpon>ucWmsOutTab.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\winAlarm.xaml.cs">
       <DependentUpon>winAlarm.xaml</DependentUpon>
@@ -451,14 +421,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UC\ucHostOutSP3.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UC\ucHostOutTab.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="UC\ucHostResult.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -511,14 +473,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UC\ucSystemSettingSP3.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UC\ucSystemSettingTab.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="UC\ucTimeStock.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -543,23 +497,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UC\ucWmsInOutGetSP3.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UC\ucWmsInOutGetTab.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="UC\ucWmsInResult.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UC\ucWmsInSP3.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UC\ucWmsInTab.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -568,14 +506,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UC\ucWmsOutResult.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UC\ucWmsOutSP3.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UC\ucWmsOutTab.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

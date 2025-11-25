@@ -16,12 +16,12 @@
 
             <local:ucToolbarBtn x:Name="ucToolbarBtn" Grid.Row="0" Grid.ColumnSpan="2"/>
 
-            <Border Grid.Row="1" Background="White" Padding="50,30,100,100">
+            <Border Grid.Row="1" Background="White" Padding="100,30,100,120">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="0.8*"/>
+                        <RowDefinition Height="0.7*"/>
                         <RowDefinition Height="0.25*"/>
-                        <RowDefinition Height="0.15*"/>
+                        <RowDefinition Height="0.2*"/>
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
@@ -54,21 +54,7 @@
 
                             <StackPanel Orientation="Horizontal" Margin="10,5,10,10">
                                 <Border Style="{StaticResource BorderStyle1}" >
-                                    <Label Content="출고 바코드 검증" Style="{StaticResource LabelStyle2}"/>
-                                </Border>
-                                <CheckBox x:Name="cbOutBcr2" Content="바코드 체크 후 진행"  Style="{StaticResource checkBoxStyle}"  Margin="25,0,0,0" FontSize="13"/>
-                            </StackPanel>
-
-                            <StackPanel Orientation="Horizontal" Margin="10,5,10,10">
-                                <Border Style="{StaticResource BorderStyle1}" >
-                                    <Label Content="출고 RFID" Style="{StaticResource LabelStyle2}"/>
-                                </Border>
-                                <CheckBox x:Name="cbRFID" Content="RF 체크 후 진행"  Style="{StaticResource checkBoxStyle}"  Margin="25,0,0,0" FontSize="13"/>
-                            </StackPanel>
-
-                            <StackPanel Orientation="Horizontal" Margin="10,5,10,10">
-                                <Border Style="{StaticResource BorderStyle1}" >
-                                    <Label Content="스태커크레인 1호기" Style="{StaticResource LabelStyle2}"/>
+                                    <Label Content="스태커크레인 3호기" Style="{StaticResource LabelStyle2}"/>
                                 </Border>
                                 <CheckBox x:Name="cbInSet1" Content="입고(할당)"  Style="{StaticResource checkBoxStyle}"  Margin="25,0,0,0" FontSize="13"/>
                                 <CheckBox x:Name="cbInOrder1" Content="입고(지시)"  Style="{StaticResource checkBoxStyle}"  Margin="10,0,0,0" FontSize="13"/>
@@ -78,7 +64,7 @@
 
                             <StackPanel Orientation="Horizontal" Margin="10,5,10,10">
                                 <Border Style="{StaticResource BorderStyle1}" >
-                                    <Label Content="스태커크레인 2호기" Style="{StaticResource LabelStyle2}"/>
+                                    <Label Content="스태커크레인 4호기" Style="{StaticResource LabelStyle2}"/>
                                 </Border>
                                 <CheckBox x:Name="cbInSet2" Content="입고(할당)"  Style="{StaticResource checkBoxStyle}"  Margin="25,0,0,0" FontSize="13"/>
                                 <CheckBox x:Name="cbInOrder2" Content="입고(지시)"  Style="{StaticResource checkBoxStyle}"  Margin="10,0,0,0" FontSize="13"/>
@@ -86,6 +72,25 @@
                                 <CheckBox x:Name="cbOutOrder2" Content="출고(지시)"  Style="{StaticResource checkBoxStyle}"  Margin="10,0,0,0" FontSize="13"/>
                             </StackPanel>
 
+                            <StackPanel Orientation="Horizontal" Margin="10,5,10,5" Visibility="Collapsed">
+                                <Border Style="{StaticResource BorderStyle1}" >
+                                    <Label Content="스테커크레인 3호기" Style="{StaticResource LabelStyle2}"/>
+                                </Border>
+                                <CheckBox Content="입고(할당)"  Style="{StaticResource checkBoxStyle}"  Margin="25,0,0,0" FontSize="13"/>
+                                <CheckBox Content="입고(지시)"  Style="{StaticResource checkBoxStyle}"  Margin="10,0,0,0" FontSize="13"/>
+                                <CheckBox Content="출고(할당)"  Style="{StaticResource checkBoxStyle}"  Margin="10,0,0,0" FontSize="13"/>
+                                <CheckBox Content="출고(지시)"  Style="{StaticResource checkBoxStyle}"  Margin="10,0,0,0" FontSize="13"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" Margin="10,5,10,5" Visibility="Collapsed">
+                                <Border Style="{StaticResource BorderStyle1}" >
+                                    <Label Content="스테커크레인 4호기" Style="{StaticResource LabelStyle2}"/>
+                                </Border>
+                                <CheckBox Content="입고(할당)"  Style="{StaticResource checkBoxStyle}"  Margin="25,0,0,0" FontSize="13"/>
+                                <CheckBox Content="입고(지시)"  Style="{StaticResource checkBoxStyle}"  Margin="10,0,0,0" FontSize="13"/>
+                                <CheckBox Content="출고(할당)"  Style="{StaticResource checkBoxStyle}"  Margin="10,0,0,0" FontSize="13"/>
+                                <CheckBox Content="출고(지시)"  Style="{StaticResource checkBoxStyle}"  Margin="10,0,0,0" FontSize="13"/>
+                            </StackPanel>
 
                             <StackPanel Orientation="Horizontal" Margin="10,5,10,10">
                                 <Border Style="{StaticResource BorderStyle1}" >
@@ -93,7 +98,7 @@
                                 </Border>
                                 <CheckBox x:Name="cbLotCheck" Content="LOT 중복 체크 후 진행"  Style="{StaticResource checkBoxStyle}"  Margin="25,0,0,0" FontSize="13"/>
                             </StackPanel>
-                            
+
                         </StackPanel>
 
                     </GroupBox>
@@ -158,50 +163,22 @@
 
                             <StackPanel Orientation="Horizontal" Margin="5,0,5,0">
                                 <Border Style="{StaticResource BorderStyle1}" Margin="20,10,10,0">
-                                    <Label Content="출고 바코드 검증" Style="{StaticResource LabelStyle2}"/>
-                                </Border>
-                                <TextBox x:Name="txtIP8" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                                <TextBox x:Name="txt1Port8" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                                <TextBox x:Name="txt2Port8" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                            </StackPanel>
-
-                            <StackPanel Orientation="Horizontal" Margin="5,0,5,0">
-                                <Border Style="{StaticResource BorderStyle1}" Margin="20,10,10,0">
-                                    <Label Content="출고 바코드 검증(3열)" Style="{StaticResource LabelStyle2}" FontSize="10"/>
-                                </Border>
-                                <TextBox x:Name="txtIP9" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                                <TextBox x:Name="txt1Port9" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                                <TextBox x:Name="txt2Port9" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                            </StackPanel>
-
-                            <StackPanel Orientation="Horizontal" Margin="5,0,5,0">
-                                <Border Style="{StaticResource BorderStyle1}" Margin="20,10,10,0">
-                                    <Label Content="RFID" Style="{StaticResource LabelStyle2}"/>
-                                </Border>
-                                <TextBox x:Name="txtIP5" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                                <TextBox x:Name="txt1Port5" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                                <TextBox x:Name="txt2Port5" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                                <CheckBox x:Name="cbLog3" Content="로그저장"  Style="{StaticResource checkBoxStyle}"  Margin="10,10,10,0" FontSize="13"/>
-                            </StackPanel>
-
-                            <StackPanel Orientation="Horizontal" Margin="5,0,5,0">
-                                <Border Style="{StaticResource BorderStyle1}" Margin="20,10,10,0">
                                     <Label Content="서열" Style="{StaticResource LabelStyle2}"/>
                                 </Border>
-                                <TextBox x:Name="txtIP6" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center"  HorizontalContentAlignment="Center"  />
-                                <TextBox x:Name="txt1Port6" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center"  HorizontalContentAlignment="Center"  />
-                                <TextBox x:Name="txt2Port6" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center"  HorizontalContentAlignment="Center"  />
-                                <CheckBox x:Name="cbLog4" Content="로그저장"  Style="{StaticResource checkBoxStyle}"  Margin="10,10,10,0" FontSize="13"/>
+                                <TextBox x:Name="txtIP5" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center"  HorizontalContentAlignment="Center"  />
+                                <TextBox x:Name="txt1Port5" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center"  HorizontalContentAlignment="Center"  />
+                                <TextBox x:Name="txt2Port5" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center"  HorizontalContentAlignment="Center"  />
+                                <CheckBox x:Name="cbLog3" Content="로그저장"  Style="{StaticResource checkBoxStyle}"  Margin="10,10,10,0" FontSize="13"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal" Margin="5,0,5,0">
                                 <Border Style="{StaticResource BorderStyle1}" Margin="20,10,10,0">
                                     <Label Content="MES" Style="{StaticResource LabelStyle2}"/>
                                 </Border>
-                                <TextBox x:Name="txtIP7" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                                <TextBox x:Name="txt1Port7" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                                <TextBox x:Name="txt2Port7" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
-                                <CheckBox x:Name="cbLog5" Content="로그저장"  Style="{StaticResource checkBoxStyle}"  Margin="10,10,10,0" FontSize="13"/>
+                                <TextBox x:Name="txtIP6" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                                <TextBox x:Name="txt1Port6" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                                <TextBox x:Name="txt2Port6" Width="120" Margin="10,10,10,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                                <CheckBox x:Name="cbLog4" Content="로그저장"  Style="{StaticResource checkBoxStyle}"  Margin="10,10,10,0" FontSize="13"/>
                             </StackPanel>
 
                         </StackPanel>
@@ -337,17 +314,11 @@
                                 <Border x:Name="border4" Style="{StaticResource BorderStyle1}" Background="#CED4DA" Width="180" Height="35" Margin="5">
                                     <Label x:Name="lb14" Content="출고 바코드" Style="{StaticResource LabelStyle1}"/>
                                 </Border>
-                                <Border x:Name="border7" Style="{StaticResource BorderStyle1}" Background="#CED4DA" Width="180" Height="35" Margin="5">
-                                    <Label x:Name="lb17" Content="출고 바코드 검증" Style="{StaticResource LabelStyle1}"/>
-                                </Border>
-                                <Border x:Name="border8" Style="{StaticResource BorderStyle1}" Background="#CED4DA" Width="180" Height="35" Margin="5">
-                                    <Label x:Name="lb18" Content="출고 바코드 검증(3열) 추가" Style="{StaticResource LabelStyle1}"/>
-                                </Border>
                                 <Border x:Name="border5" Style="{StaticResource BorderStyle1}" Background="#CED4DA" Width="180" Height="35" Margin="5">
-                                    <Label x:Name="lb15" Content="RFID" Style="{StaticResource LabelStyle1}"/>
+                                    <Label x:Name="lb15" Content="서열" Style="{StaticResource LabelStyle1}"/>
                                 </Border>
                                 <Border x:Name="border6" Style="{StaticResource BorderStyle1}" Background="#CED4DA" Width="180" Height="35" Margin="5">
-                                    <Label x:Name="lb16" Content="의장 통신" Style="{StaticResource LabelStyle1}"/>
+                                    <Label x:Name="lb16" Content="MES" Style="{StaticResource LabelStyle1}"/>
                                 </Border>
                             </StackPanel>
                         </StackPanel>
@@ -357,5 +328,5 @@
             </Border>
         </Grid>
     </Border>
-   
+
 </UserControl>

@@ -81,7 +81,7 @@ namespace dayouAWSWh2.UC
 
         private void doSearch()
         {
-            _jobList = _stockData.getTotalJobList(DatePicker1.Text + " " + timeTextBox.Text, DatePicker2.Text + " " + timeTextBox2.Text, cbFR.Text == "전체" ? "" : cbFR.Text, txtAlc.Text, cbCarCode.Text);
+            _jobList = _stockData.getTotalJobList(DatePicker1.Text + " " + timeTextBox.Text, DatePicker2.Text + " " + timeTextBox2.Text, cbFR.Text == "전체" ? "" : cbFR.Text, txtAlc.Text);
             totalJobDataGrid.ItemsSource = _jobList;
         }
 

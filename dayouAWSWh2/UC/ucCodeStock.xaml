@@ -35,8 +35,7 @@
                     <DataGridTextColumn Header="차종" IsReadOnly="True" Width="100" Binding="{Binding ALC_CLASS}" ElementStyle="{StaticResource DataGridCellCenter}"/>
                     <DataGridTextColumn Header="TYPE" IsReadOnly="True" Width="100" Binding="{Binding ALC_TYPE}" ElementStyle="{StaticResource DataGridCellCenter}"/>
                     <DataGridTextColumn Header="FR수량" IsReadOnly="True" Width="50" Binding="{Binding FR_CNT}" ElementStyle="{StaticResource DataGridCellCenter}"/>
-                    <DataGridTextColumn Header="R2수량" IsReadOnly="True" Width="50" Binding="{Binding R2_CNT}" ElementStyle="{StaticResource DataGridCellCenter}"/>
-                    <DataGridTextColumn Header="R3수량" IsReadOnly="True" Width="50" Binding="{Binding R3_CNT}" ElementStyle="{StaticResource DataGridCellCenter}"/>
+                    <DataGridTextColumn Header="RR수량" IsReadOnly="True" Width="50" Binding="{Binding RR_CNT}" ElementStyle="{StaticResource DataGridCellCenter}"/>
                 </DataGrid.Columns>
             </DataGrid>
 

@@ -25,10 +25,9 @@ namespace dayouAWSWh2.View
         cMessage _items = new cMessage();
         string _carCode = "";
 
-        public winHostAdd(string carCode)
+        public winHostAdd()
         {
             InitializeComponent();
-            _carCode = carCode;
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
@@ -66,7 +65,7 @@ namespace dayouAWSWh2.View
             }
             else
             {
-                _items = _hostData.alcAddHost(txtDate.Text, txtCommit.Text, txtAlc.Text, txtBody.Text ,txtRegion.Text, txtNation.Text, txtColor.Text, _carCode);
+                _items = _hostData.alcAddHost(txtDate.Text, txtCommit.Text, txtAlc.Text, txtBody.Text ,txtRegion.Text, txtNation.Text, txtColor.Text);
 
                 if(_items.RESULT == "NG")
                 {

@@ -77,18 +77,18 @@ namespace dayouAWSWh2.UC
 
         private void doSearch()
         {
-                _palletList = _palletData.getPalletList(txtPallet.Text, cbCarCode.Text);
+                _palletList = _palletData.getPalletList(txtPallet.Text);
                 PalletDataGrid.ItemsSource = _palletList;
         }
 
         private void doAdd()
         {
-            winPalletPopup _winPallet = new winPalletPopup("", "", "", "파레트 코드 추가", "1", cbCarCode.Text);
+            winPalletPopup _winPallet = new winPalletPopup("", "", "", "파레트 코드 추가", "1");
 
             _winPallet.ShowDialog();
             if (_winPallet.DialogResult == true)
             {
-                _palletList = _palletData.getPalletList(txtPallet.Text, cbCarCode.Text);
+                _palletList = _palletData.getPalletList(txtPallet.Text);
                 PalletDataGrid.ItemsSource = _palletList;
             }
         }
@@ -100,9 +100,9 @@ namespace dayouAWSWh2.UC
             {
                 if (MessageBox.Show(_palletList[row].PALLETCD + " 을(를) 삭제하시겠습니까?", "삭제", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
-                    _palletData.deletePallet(_palletList[row].PALLETCD.ToString(), cbCarCode.Text);
+                    _palletData.deletePallet(_palletList[row].PALLETCD.ToString());
 
-                    _palletList = _palletData.getPalletList(txtPallet.Text, cbCarCode.Text);
+                    _palletList = _palletData.getPalletList(txtPallet.Text);
                     PalletDataGrid.ItemsSource = _palletList;
                 }
                 else
@@ -122,12 +122,12 @@ namespace dayouAWSWh2.UC
 
             try
             {
-                winPalletPopup _winPallet = new winPalletPopup(_palletList[row].PALLETCD.ToString(), _palletList[row].PALLETNM.ToString(), _palletList[row].BADCODE.ToString(), "파레트 코드 수정", "0", cbCarCode.Text);
+                winPalletPopup _winPallet = new winPalletPopup(_palletList[row].PALLETCD.ToString(), _palletList[row].PALLETNM.ToString(), _palletList[row].BADCODE.ToString(), "파레트 코드 수정", "0");
 
                 _winPallet.ShowDialog();
                 if (_winPallet.DialogResult == true)
                 {
-                    _palletList = _palletData.getPalletList(txtPallet.Text, cbCarCode.Text);
+                    _palletList = _palletData.getPalletList(txtPallet.Text);
                     PalletDataGrid.ItemsSource = _palletList;
                 }
             }
