@@ -60,45 +60,6 @@ namespace dayouAWSWh2.Data
             return list;
         }
 
-        //호기 조회 (SP3)
-        public cSccList Wh2SccNoGet()
-        {
-            cSccList list = new cSccList();
-
-            try
-            {
-                using (SqlConnection connect = new SqlConnection(_conn))
-                {
-                    SqlCommand cmd = new SqlCommand("SP_CS_SCC_NO_GET_WH2", connect);
-
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-
-
-                    connect.Open();
-
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataSet ds = new DataSet();
-
-                    adapter.Fill(ds);
-
-                    DataTable dt = ds.Tables[0];
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        list.Add(new cSccItem
-                        {
-                            SCC_NO = Convert.ToInt32(row["SCC_NO"].ToString()),
-                            SCC_NAME = row["SCC_NAME"].ToString(),
-
-                        });
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-            }
-            return list;
-        }
 
         //크레인 정보 조회
         public cSccList GetSccData(int SCC_NO)
@@ -170,36 +131,7 @@ namespace dayouAWSWh2.Data
             }
 
         }
-        // 크레인 작업진행_WH2
-        public void SccCurrentAddWh2(int SCC_NO, string TYPE)
-        {
-            try
-            {
-                using (SqlConnection connect = new SqlConnection(_conn))
-                {
-                    SqlCommand cmd = new SqlCommand("SP_CS_SCC_CURRENT_WH2", connect);
-
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-
-                    cmd.Parameters.Add(new SqlParameter("SCC_NO", SCC_NO));
-                    cmd.Parameters.Add(new SqlParameter("TYPE", TYPE));
-
-                    connect.Open();
-
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataSet ds = new DataSet();
-
-                    adapter.Fill(ds);
-
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-            }
-
-        }
-
+    
         //SCIO 정보 조회
         public cSccScioItem ScioGet(int SCC_NO)
         {

@@ -130,7 +130,7 @@ namespace dayouAWSWh2.UC
             cbLoadCode.ItemsSource = _alcLst.Where(item => item.ALC_CLASS == "SP3").Select(item => item.ALC_CODE).ToList();
 
             // 스태커크레인 호기 바인딩
-            _sccNo = _sccData.Wh2SccNoGet();
+            _sccNo = _sccData.GetSccNo();
             cbSccNo.ItemsSource = _sccNo;
             cbSccNo.DisplayMemberPath = "SCC_NAME";
             cbSccNo.SelectedValuePath = "SCC_NO";
@@ -170,15 +170,15 @@ namespace dayouAWSWh2.UC
                 {
                     // 로컬 변수로 다 받아오기
                     var comStatus = _comData.ComStatusGet();
-                    var list = _data.Wh2CvcGet();
+                    var list = _data.GetCvc();
                     var sccLoc1 = _sccData.GetSccData(3);
                     var sccLoc2 = _sccData.GetSccData(4);
-                    var arrowLst = _arrowData.Wh2ArrowGet();
-                    var pltList = _trackData.Wh2TrackPltGet();
+                    var arrowLst = _arrowData.ArrowGet();
+                    var pltList = _trackData.TrackPltGet();
                     var bcrLst = _bcrData.BcrPltGet();
-                    var errorLst = _errorData.Wh2CvErrorGet();
-                    var hostItem = _hostData.Wh2HostProdGet();
-                    var opList = _opData.Wh2OpGet();
+                    var errorLst = _errorData.CvErrorGet();
+                    var hostItem = _hostData.HostProdGet();
+                    var opList = _opData.OpGet();
 
                     // 익명 타입으로 묶어서 리턴 (클래스 안 만들어도 됨)
                     return new
@@ -222,42 +222,7 @@ namespace dayouAWSWh2.UC
                 _isCvTimerRunning = false;
             }
         }
-      /*  private void CvTimer()
-        {
-            _timer = new Timer(1000);
-            _timer.Elapsed += (s, e) =>
-            {
-                //DB 통신--------------------------------------
-                //통신상태
-                _comStatus = _comData.Wh2ComStatusGet();
-                //버퍼 업데이트
-                _list = _data.Wh2CvcGet();
-                //스태커크레인
-                _sccLoc1 = _sccData.GetSccData(3);
-                _sccLoc2 = _sccData.GetSccData(4);
-                //화살표제어
-                _arrowLst = _arrowData.Wh2ArrowGet();
-                _pltList = _trackData.Wh2TrackPltGet();
-                _bcrLst = _bcrData.BcrPltGet();
-                _errorLst = _errorData.Wh2CvErrorGet();
-                //의장 수신정보
-                _hostItem = _hostData.Wh2HostProdGet();
-                //OP,MOP
-                _opList = _opData.Wh2OpGet();
-              
-                //-----------------------------------------------
-
-                // Elapsed는 백그라운드 스레드에서 실행되므로 UI 접근 시 Dispatcher 필요
-                Application.Current.Dispatcher.BeginInvoke(new Action(() =>
-                {
-                    TimerUpdate();
-                }));
-            };
-            //_timer.Elapsed += Timer_Elapsed;
-            _timer.AutoReset = true;
-
-        }*/
-
+     
         private void TimerUpdate()
         {
             //통신상태 업데이트
@@ -644,7 +609,7 @@ namespace dayouAWSWh2.UC
         private void btnScClear_Click(object sender, RoutedEventArgs e)
         {
             if (sccNo != 0)
-                _sccData.SccCurrentAddWh2(sccNo, "1");
+                _sccData.SccCurrentAdd(sccNo, "1");
         }
 
         private void btnCvcMove_Click(object sender, RoutedEventArgs e)
@@ -672,7 +637,7 @@ namespace dayouAWSWh2.UC
             // 사용자가 "Yes"를 선택한 경우에만 실행
             if (result == MessageBoxResult.Yes)
             {
-                _cvcResult = _data.Wh2CvMove(Convert.ToInt32(txtBuff.Text), Convert.ToInt32(txtBuffTarget.Text));
+                _cvcResult = _data.CvMove(Convert.ToInt32(txtBuff.Text), Convert.ToInt32(txtBuffTarget.Text));
 
                 if (_cvcResult.RESULT == "NG")
                 {
@@ -697,7 +662,7 @@ namespace dayouAWSWh2.UC
             // 사용자가 "Yes"를 선택한 경우에만 실행
             if (result == MessageBoxResult.Yes)
             {
-                _data.Wh2CvDel(Convert.ToInt32(txtBuff.Text));
+                _data.CvDel(Convert.ToInt32(txtBuff.Text));
                 DoClear();
             }
         }
@@ -728,7 +693,7 @@ namespace dayouAWSWh2.UC
             // 사용자가 "Yes"를 선택한 경우에만 실행
             if (result == MessageBoxResult.Yes)
             {
-                _cvcResult = _data.Wh2CvSwap(Convert.ToInt32(txtBuff.Text), Convert.ToInt32(txtBuffTarget.Text));
+                _cvcResult = _data.CvSwap(Convert.ToInt32(txtBuff.Text), Convert.ToInt32(txtBuffTarget.Text));
 
                 if (_cvcResult.RESULT == "NG")
                 {
@@ -742,37 +707,37 @@ namespace dayouAWSWh2.UC
 
         private void btnCvGo_Click(object sender, RoutedEventArgs e)
         {
-            _data.Wh2OrderCv(Convert.ToInt32(txtBuff.Text), "0");
+            _data.OrderCv(Convert.ToInt32(txtBuff.Text), "0");
             DoClear();
         }
 
         private void btnCvGoComp_Click(object sender, RoutedEventArgs e)
         {
-            _data.Wh2OrderCv(Convert.ToInt32(txtBuff.Text), "1");
+            _data.OrderCv(Convert.ToInt32(txtBuff.Text), "1");
             DoClear();
         }
 
         private void btnCvQua_Click(object sender, RoutedEventArgs e)
         {
-            _data.Wh2OrderCv(Convert.ToInt32(txtBuff.Text), "2");
+            _data.OrderCv(Convert.ToInt32(txtBuff.Text), "2");
             DoClear();
         }
 
         private void btnCvQuaComp_Click(object sender, RoutedEventArgs e)
         {
-            _data.Wh2OrderCv(Convert.ToInt32(txtBuff.Text), "3");
+            _data.OrderCv(Convert.ToInt32(txtBuff.Text), "3");
             DoClear();
         }
 
         private void btnCvJoin_Click(object sender, RoutedEventArgs e)
         {
-            _data.Wh2OrderCv(Convert.ToInt32(txtBuff.Text), "4");
+            _data.OrderCv(Convert.ToInt32(txtBuff.Text), "4");
             DoClear();
         }
 
         private void btnCvJoinComp_Click(object sender, RoutedEventArgs e)
         {
-            _data.Wh2OrderCv(Convert.ToInt32(txtBuff.Text), "5");
+            _data.OrderCv(Convert.ToInt32(txtBuff.Text), "5");
             DoClear();
         }
 
@@ -788,7 +753,7 @@ namespace dayouAWSWh2.UC
 
             if (result == MessageBoxResult.Yes)
             {
-                _trackData.Wh2TrackUpdate(Convert.ToInt32(txtBuff.Text), cbLoadCode.Text, tbLotno1.Text, tbLotno2.Text,
+                _trackData.TrackUpdate(Convert.ToInt32(txtBuff.Text), cbLoadCode.Text, tbLotno1.Text, tbLotno2.Text,
                                     tbLotno3.Text, tbLotno4.Text, tbLotno5.Text, tbPlt.Text, tbCommit.Text, tbBody.Text);
                 DoClear();
 
@@ -1047,7 +1012,7 @@ namespace dayouAWSWh2.UC
                     return;
                 }
 
-                _track = _trackData.Wh2TrackGet(Convert.ToInt32(borderName));
+                _track = _trackData.TrackGet(Convert.ToInt32(borderName));
 
                 txtLoc.Text = _track.ID_BANK + "-" + _track.ID_BAY + "-" + _track.ID_LEVEL;
                 txtOrder.Text = _track.ORDER_DATE + _track.ORDER_TIME + "-" + _track.ORDER_INDEX + "-" + _track.ORDER_SUBIDX;
