@@ -1,0 +1,2439 @@
+﻿<UserControl x:Class="dayouAWSWh2.UC.ucEquipMonitorSP3"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:dayouAWSWh2.UC"
+            mc:Ignorable="d" 
+            d:DesignWidth="1720" d:DesignHeight="950"   
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Loaded="UserControl_Loaded" Unloaded="UserControl_Unloaded" >
+    <Border Padding="8">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <local:ucToolbarBtn x:Name="ucToolbarBtn"/>
+            <Grid Grid.Row="1" Background="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.42*"/>
+                    <ColumnDefinition Width="0.42*"/>
+                    <ColumnDefinition Width="0.16*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="90"/>
+                </Grid.RowDefinitions>
+
+                <!--1단-->
+                <Border Grid.Column="0"  Margin="10 5" Background="#FFF5F6F7" BorderBrush="LightGray" BorderThickness="1" CornerRadius="5" SnapsToDevicePixels="True">
+                    <Grid >
+                        <Border Style="{StaticResource equipBd}" Width="70" Height="25" Margin="10 -2 0 0" BorderThickness="1 0 1 1" CornerRadius="0 0 3 3" Background="#FFBB4055" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                            <TextBlock Text="1단 입고" FontSize="14" Height="14" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold" TextWrapping="Wrap" VerticalAlignment="Center" />
+                        </Border>
+
+                        <Grid Width="48" Height="20" Background="#FFEA8000" Margin="60 0 0 347">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="6"/>
+                                <ColumnDefinition Width="36"/>
+                                <ColumnDefinition Width="6"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" BorderBrush="White" BorderThickness="0.5" Width="6" Margin="0">
+                                <Canvas>
+                                    <!-- X자 선 (왼쪽 위 → 오른쪽 아래) -->
+                                    <Line X1="0" Y1="0" X2="5" Y2="20" Stroke="White" StrokeThickness="0.5"/>
+                                    <Line X1="5" Y1="0" X2="0" Y2="20" Stroke="White" StrokeThickness="0.5"/>
+                                </Canvas>
+                            </Border>
+                            <Border Grid.Column="1" BorderBrush="White" BorderThickness="0 0.5" />
+                            <Border Grid.Column="2" BorderBrush="White" BorderThickness="0.5" Width="6">
+                                <Canvas>
+                                    <!-- X자 선 (왼쪽 위 → 오른쪽 아래) -->
+                                    <Line X1="0" Y1="0" X2="5" Y2="20" Stroke="White" StrokeThickness="0.5"/>
+                                    <Line X1="5" Y1="0" X2="0" Y2="20" Stroke="White" StrokeThickness="0.5"/>
+
+                                </Canvas>
+                            </Border>
+                        </Grid>
+                       
+                        <Grid Width="48" Height="21" Background="#FFEA8000" Margin="412 0 0 239" RenderTransformOrigin="0.5,0.5">
+                            <Grid.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="90"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Grid.RenderTransform>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="6"/>
+                                <ColumnDefinition Width="36"/>
+                                <ColumnDefinition Width="6"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" BorderBrush="White" BorderThickness="0.5" Width="6" Margin="0">
+                                <Canvas>
+                                    <!-- X자 선 (왼쪽 위 → 오른쪽 아래) -->
+                                    <Line X1="0" Y1="0" X2="5" Y2="20" Stroke="White" StrokeThickness="0.5"/>
+                                    <Line X1="5" Y1="0" X2="0" Y2="20" Stroke="White" StrokeThickness="0.5"/>
+                                </Canvas>
+                            </Border>
+                            <Border Grid.Column="1" BorderBrush="White" BorderThickness="0 0.5" />
+                            <Border Grid.Column="2" BorderBrush="White" BorderThickness="0.5" Width="6">
+                                <Canvas>
+                                    <!-- X자 선 (왼쪽 위 → 오른쪽 아래) -->
+                                    <Line X1="0" Y1="0" X2="5" Y2="20" Stroke="White" StrokeThickness="0.5"/>
+                                    <Line X1="5" Y1="0" X2="0" Y2="20" Stroke="White" StrokeThickness="0.5"/>
+
+                                </Canvas>
+                            </Border>
+                        </Grid>
+                        <Grid Width="48" Height="21" Background="#FFEA8000" Margin="555 466 -110 0" RenderTransformOrigin="0.5,0.5">
+                            <Grid.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="90"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Grid.RenderTransform>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="6"/>
+                                <ColumnDefinition Width="36"/>
+                                <ColumnDefinition Width="6"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" BorderBrush="White" BorderThickness="0.5" Width="6" Margin="0">
+                                <Canvas>
+                                    <!-- X자 선 (왼쪽 위 → 오른쪽 아래) -->
+                                    <Line X1="0" Y1="0" X2="5" Y2="20" Stroke="White" StrokeThickness="0.5"/>
+                                    <Line X1="5" Y1="0" X2="0" Y2="20" Stroke="White" StrokeThickness="0.5"/>
+                                </Canvas>
+                            </Border>
+                            <Border Grid.Column="1" BorderBrush="White" BorderThickness="0 0.5" />
+                            <Border Grid.Column="2" BorderBrush="White" BorderThickness="0.5" Width="6">
+                                <Canvas>
+                                    <!-- X자 선 (왼쪽 위 → 오른쪽 아래) -->
+                                    <Line X1="0" Y1="0" X2="5" Y2="20" Stroke="White" StrokeThickness="0.5"/>
+                                    <Line X1="5" Y1="0" X2="0" Y2="20" Stroke="White" StrokeThickness="0.5"/>
+
+                                </Canvas>
+                            </Border>
+                        </Grid>
+
+                        <Border x:Name="bdReady572" Width="36" Height="21" Background="Red" Margin="0 0 468 590"/>
+                        <Border x:Name="bdReady576" Width="36" Height="21" Background="Red" Margin="0 0 252 590"/>
+
+                        <StackPanel Grid.Column="0" Width="18" Height="380" Margin="0 0 666 230">
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="01" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="02" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="03" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="04" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="05" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="06" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="07" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="08" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="09" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="10" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="11" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="12" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="13" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="14" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="15" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="16" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="17" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="18" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 1">
+                                <TextBlock Text="19" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Grid.Column="0" Width="34" Height="380" Margin="0 0 612 230">
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1">
+                                <TextBlock Text="8열" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Grid.Column="0" Width="34" Height="360" Margin="0 0 468 210">
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1">
+                                <TextBlock Text="7열" FontSize="12"  Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Grid.Column="0" Width="34" Height="380" Margin="0 0 396 230">
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1">
+                                <TextBlock Text="6열" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Grid.Column="0" Width="34" Height="360" Margin="0 0 252 210">
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1">
+                                <TextBlock Text="5열" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </StackPanel>
+
+                        <Grid Width="10" Height="401" Margin="0 0 539 226">
+                            <Line X1="0" Y1="0" X2="10" Y2="0" Stroke="Black" StrokeThickness="1"/>
+                            <Line X1="5" Y1="0" X2="5" Y2="400" Stroke="Black" StrokeThickness="1"/>
+                            <Line X1="0" Y1="400" X2="10" Y2="400" Stroke="Black" StrokeThickness="1"/>
+                        </Grid>
+                        <Grid Width="10" Height="401" Margin="0 0 324 226">
+                            <Line X1="0" Y1="0" X2="10" Y2="0" Stroke="Black" StrokeThickness="1"/>
+                            <Line X1="5" Y1="0" X2="5" Y2="400" Stroke="Black" StrokeThickness="1"/>
+                            <Line X1="0" Y1="400" X2="10" Y2="400" Stroke="Black" StrokeThickness="1"/>
+                        </Grid>
+
+                        <Canvas Width="26" Height="30" Margin="0 0 539 588" MouseLeftButtonDown="bdScc2_MouseLeftButtonDown">
+                            <Border x:Name="bdScc1F2" Width="26" Height="30" Padding="1">
+                                <Border.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFE6E6E6"/>
+                                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                                        <GradientStop Color="#FFAFAFAF" Offset="0.5"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Border x:Name="bdMode1F2" Grid.Row="0" BorderBrush="DarkGray" BorderThickness="1 1 1 0.5" Background="White">
+                                        <TextBlock x:Name="txtMode1F2" Text="A" FontSize="11" Height="11" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                    <Border x:Name="bdCargo1F2" Grid.Row="1" BorderBrush="DarkGray" BorderThickness="1 0.5 1 1" Background="#FF0070C0">
+                                        <TextBlock x:Name="txtCargo1F2" Text="" FontSize="11" Height="11" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </Grid>
+                            </Border>
+                        </Canvas>
+                        <Canvas Width="26" Height="30" Margin="0 0 324 588" MouseLeftButtonDown="bdScc1_MouseLeftButtonDown">
+                            <Border x:Name="bdScc1F1" Width="26" Height="30" Padding="1">
+                                <Border.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFE6E6E6"/>
+                                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                                        <GradientStop Color="#FFAFAFAF" Offset="0.5"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Border x:Name="bdMode1F1" Grid.Row="0" BorderBrush="DarkGray" BorderThickness="1 1 1 0.5" Background="White">
+                                        <TextBlock x:Name="txtMode1F1" Text="A" FontSize="11" Height="11" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                    <Border x:Name="bdCargo1F1" Grid.Row="1" BorderBrush="DarkGray" BorderThickness="1 0.5 1 1" Background="LimeGreen">
+                                        <TextBlock x:Name="txtCargo1F1" Text="" FontSize="11" Height="11" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </Grid>
+                            </Border>
+                        </Canvas>
+
+
+                        <Border x:Name="op01" Background="Gray" Width="34" Height="16" Margin="220 90 0 0" >
+                            <TextBlock Text="OP01" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" />
+                        </Border>
+                        <Border x:Name="op02" Background="Gray" Width="16" Height="34" Margin="600 0 0 210" >
+                            <TextBlock Text="OP02" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" >
+                                <TextBlock.LayoutTransform>
+                                    <RotateTransform Angle="90"/>
+                                </TextBlock.LayoutTransform>
+                            </TextBlock>
+                        </Border>
+                        <Border x:Name="op03" Background="Gray" Width="34" Height="16" Margin="150 0 0 140" >
+                            <TextBlock Text="OP03" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" />
+                        </Border>
+                        <Border x:Name="op04" Background="Gray" Width="34" Height="16" Margin="0 0 50 700" >
+                            <TextBlock Text="OP04" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" />
+                        </Border>
+                        <Border x:Name="op05" Background="Gray" Width="34" Height="16" Margin="550 620 0 0" >
+                            <TextBlock Text="OP05" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" />
+                        </Border>
+                        <Border x:Name="op06" Background="Gray" Width="16" Height="34" Margin="660 370 0 0" >
+                            <TextBlock Text="OP06" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" >
+                                <TextBlock.LayoutTransform>
+                                    <RotateTransform Angle="90"/>
+                                </TextBlock.LayoutTransform>
+                            </TextBlock>
+                        </Border>
+
+                        <Border x:Name="mop01" Background="Gray" Width="16" Height="38" Margin="376 740 0 0" >
+                            <TextBlock Text="MOP01" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" >
+                                <TextBlock.LayoutTransform>
+                                    <RotateTransform Angle="90"/>
+                                </TextBlock.LayoutTransform>
+                            </TextBlock>
+                        </Border>
+                        <Border x:Name="mop02" Background="Gray" Width="38" Height="16" Margin="220 500 0 0" >
+                            <TextBlock Text="MOP02" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" />
+                        </Border>
+                        <Border x:Name="mop03" Background="Gray" Width="38" Height="16" Margin="220 200 0 0" >
+                            <TextBlock Text="MOP03" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" />
+                        </Border>
+                        <Border x:Name="mop04" Background="Gray" Width="38" Height="16" Margin="220 0 0 0" >
+                            <TextBlock Text="MOP04" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" />
+                        </Border>
+                        <Border x:Name="mop05" Background="Gray" Width="38" Height="16" Margin="414 0 0 170" >
+                            <TextBlock Text="MOP05" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" />
+                        </Border>
+                        <Border x:Name="mop07" Background="Gray" Width="38" Height="16" Margin="550 500 0 0" >
+                            <TextBlock Text="MOP07" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" />
+                        </Border>
+                        <Border x:Name="mop08" Background="Gray" Width="38" Height="16" Margin="550 200 0 0" >
+                            <TextBlock Text="MOP08" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" />
+                        </Border>
+                        <Border x:Name="mop09" Background="Gray" Width="38" Height="16" Margin="550 150 0 0" >
+                            <TextBlock Text="MOP09" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" />
+                        </Border>
+                        <Border x:Name="mop10" Background="Gray" Width="38" Height="16" Margin="550 390 0 0" >
+                            <TextBlock Text="MOP10" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" />
+                        </Border>
+                        <Border x:Name="mop20" Background="Gray" Width="38" Height="16" Margin="550 760 0 0" >
+                            <TextBlock Text="MOP20" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" />
+                        </Border>
+
+
+
+                        <!-- 원 (Ellipse) -->
+                        <Grid Width="40" Height="40" Margin="644 0 0 308">
+                            <Ellipse Fill="LightGray" Stroke="Gray" StrokeThickness="1" Width="40" Height="40"/>
+                        </Grid>
+                        <Grid Width="40" Height="40" Margin="315 0 0 90">
+                            <Ellipse Fill="LightGray" Stroke="Gray" StrokeThickness="1" Width="40" Height="40"/>
+                        </Grid>
+                        <Grid Width="40" Height="40" Margin="260 0 0 240">
+                            <Ellipse Fill="LightGray" Stroke="Gray" StrokeThickness="1" Width="40" Height="40"/>
+                        </Grid>
+                        <Grid Width="40" Height="40" Margin="620 100 0 0">
+                            <Ellipse Fill="LightGray" Stroke="Gray" StrokeThickness="1" Width="40" Height="40"/>
+                        </Grid>
+
+                        <StackPanel Width="36" Height="191" Margin="60 0 0 525">
+                            <Border x:Name="s560" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="560" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s559" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="559" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s558" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="558" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s557" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="557" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s556" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="556" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s555" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="555" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s554" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="554" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s553" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="553" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s552" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="552" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s551" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="551" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s550" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="550" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s549" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="549" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Width="300" Height="19" Margin="0 0 204 742">
+                            <Border x:Name="s568" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="568" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border Width="6" Style="{StaticResource equipBd}" Background="#FFE8E8E8"/>
+                            <Border x:Name="s567" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="567" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border Width="26" Style="{StaticResource equipBd}" Background="#FFE8E8E8"/>
+                            <Border x:Name="s566" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="566" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s565" Style="{StaticResource equipBd}" Width="28" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="565" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s564" Style="{StaticResource equipBd}" Width="28" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="564" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s563" Style="{StaticResource equipBd}" Width="28" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="563" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s562" Style="{StaticResource equipBd}" Width="28" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="562" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s561" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="561" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                        </StackPanel>
+
+                        <StackPanel Width="36" Height="76" Margin="0 0 468 647">
+                            <Border x:Name="s569" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="569" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+
+                            <Border x:Name="s570" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="570" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s571" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="571" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s572" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="572" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Width="36" Height="76" Margin="0 0 252 647">
+                            <Border x:Name="s573" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="573" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+
+                            <Border x:Name="s574" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="574" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s575" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="575" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s576" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="576" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Width="288" Height="19" Margin="312 0 0 308">
+                            <Border x:Name="s548" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="548" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s547" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="547" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s546" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="546" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s545" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="545" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s544" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="544" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s543" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="543" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s542" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="542" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s541" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="541" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" Width="20" Height="183" Margin="644 0 0 161">
+                            <Border x:Name="s540" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="540" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border Height="3"/>
+                            <Border x:Name="s539" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="539" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border Style="{StaticResource equipBd2}" Background="#FFE8E8E8"/>
+                            <Border x:Name="s537" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="537" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s536" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="536" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Width="57" Height="36" Margin="566 0 0 14">
+                            <Border x:Name="s533" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="533" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s534" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="534" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s535" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="535" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Width="126" Height="36" Margin="422 0 0 90">
+                            <Border x:Name="s527" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="527" Style="{StaticResource txtMonitor}" FontWeight="Bold">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border Width="12"/>
+                            <Border x:Name="s528" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="528" Style="{StaticResource txtMonitor}" FontWeight="Bold">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s529" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="529" Style="{StaticResource txtMonitor}" FontWeight="Bold">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s530" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="530" Style="{StaticResource txtMonitor}" FontWeight="Bold">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s531" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="531" Style="{StaticResource txtMonitor}" FontWeight="Bold">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s532" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="532" Style="{StaticResource txtMonitor}" FontWeight="Bold">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                        </StackPanel>
+
+                        <StackPanel Width="36" Height="416" Margin="315 370 0 0">
+                            <Border x:Name="s526" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="526" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s525" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="525" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s524" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="524" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s523" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="523" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s522" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="522" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s521" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="521" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s520" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="520" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s519" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="519" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s518" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="518" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s517" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="517" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s516" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="516" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s515" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="515" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s514" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="514" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s513" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="513" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s512" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="512" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s511" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="511" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s510" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="510" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s509" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="509" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s508" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="508" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s507" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="507" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s506" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="506" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s505" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="505" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s504" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="504" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s503" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="503" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s502" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="502" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s501" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="501" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                        </StackPanel>
+
+                        <StackPanel Width="36" Height="352" Margin="459 434 0 0">
+                            <Border x:Name="s582" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="582" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s581" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="581" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s580" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="580" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s579" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="579" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s578" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="578" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s612" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="612" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s613" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="613" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s614" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="614" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s615" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="615" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s616" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="616" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s617" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="617" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s618" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="618" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s619" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="619" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s620" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="620" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s621" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="621" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s622" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="622" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s623" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="623" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s624" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="624" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s625" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="625" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s626" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="626" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s627" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="627" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s628" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="628" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                        </StackPanel>
+
+
+                        <Border x:Name="s577" Style="{StaticResource equipBdSp3}" Margin="387 226 0 0" MouseLeftButtonDown="MouseLeft_Down">
+                            <TextBlock Text="577" Style="{StaticResource txtMonitor}"/>
+                        </Border>
+                        <Border x:Name="s583" Style="{StaticResource equipBdSp3}" Margin="540 98 0 0" MouseLeftButtonDown="MouseLeft_Down">
+                            <TextBlock Text="583" Style="{StaticResource txtMonitor}"/>
+                        </Border>
+
+                        <StackPanel Orientation="Vertical" Width="20" Height="220" Margin="620 284 0 0">
+                            <Border x:Name="s584" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="584" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border Height="3"/>
+                            <Border x:Name="s585" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="585" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s586" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="586" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s587" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="587" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s588" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="588" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s589" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="589" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                        </StackPanel>
+
+                        <Border x:Name="s590" Style="{StaticResource equipBd2}" Margin="665 466 0 0" MouseLeftButtonDown="MouseLeft_Down">
+                            <TextBlock Text="590" Style="{StaticResource txtMonitor}">
+                                <TextBlock.LayoutTransform>
+                                    <RotateTransform Angle="90"/>
+                                </TextBlock.LayoutTransform>
+                            </TextBlock>
+                        </Border>
+
+                        <StackPanel Width="36" Height="60" Margin="132 0 0 225">
+                            <Border x:Name="s611" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="611" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+
+                            <Border x:Name="s610" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="610" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border Height="3"/>
+                            <Border x:Name="s609" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="609" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Width="61" Height="19" Margin="242 0 0 184">
+                            <Border Width="18" Style="{StaticResource equipBd}" Background="#FFE8E8E8"/>
+                            <Border Width="2"/>
+                            <Border x:Name="s608" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="608" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Width="95" Height="36" Margin="336 0 0 240">
+                            <Border x:Name="s607" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="607" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border Width="14"/>
+                            <Border x:Name="s606" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="606" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s605" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="605" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border Width="5"/>
+                            <Border x:Name="s604" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="604" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                        </StackPanel>
+
+                        <Image x:Name="arow565" Source="/Images/긴화살표4.png" Width="34" Height="34" Margin="0 -10 200 760" IsHitTestVisible="False" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="180"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <Image x:Name="arow566" Source="/Images/긴화살표4.png" Width="34" Height="34" Margin="0 -10 300 760" IsHitTestVisible="False" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="180"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <Image x:Name="arow566_down" Source="/Images/긴화살표2.png" Width="30" Height="30" Margin="0 0 190 696" IsHitTestVisible="False" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="270"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <Image x:Name="arow560" Source="/Images/긴화살표4.png" Width="34" Height="34" Margin="106 0 0 702" IsHitTestVisible="False" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="270"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <Image x:Name="arow561" Source="/Images/긴화살표4.png" Width="34" Height="34" Margin="54 -10 0 760" IsHitTestVisible="False" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="180"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <Image x:Name="arow546" Source="/Images/긴화살표4.png" Width="34" Height="34" Margin="196 0 0 338" IsHitTestVisible="False" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="180"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <Image x:Name="arow611" Source="/Images/긴화살표4.png" Width="34" Height="34" Margin="178 0 0 266" IsHitTestVisible="False" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="270"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <Image x:Name="arow543" Source="/Images/긴화살표4.png" Width="34" Height="34" Margin="414 0 0 338" IsHitTestVisible="False" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="180"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <Image x:Name="arow587" Source="/Images/긴화살표4.png" Width="34" Height="34" Margin="582 324 0 0" IsHitTestVisible="False" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="90"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+
+
+                    </Grid>
+                </Border>
+
+                <!--1.5단-->
+                <Border Grid.Column="1"  Margin="10 5" Background="#FFF5F6F7" BorderBrush="LightGray" BorderThickness="1" CornerRadius="5" SnapsToDevicePixels="True">
+                    <Grid >
+                        <Border Style="{StaticResource equipBd}" Width="70" Height="25" Margin="10 -2 0 0" BorderThickness="1 0 1 1" CornerRadius="0 0 3 3" Background="#FFBB4055" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                            <TextBlock Text="2단 출고" FontSize="14" Height="14" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold" TextWrapping="Wrap" VerticalAlignment="Center" />
+                        </Border>
+
+                        <Border x:Name="op07" Background="Gray" Width="34" Height="16" Margin="0 0 50 700" >
+                            <TextBlock Text="OP07" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" />
+                        </Border>
+                        <Border x:Name="op08" Background="Gray" Width="34" Height="16" Margin="260 0 0 140" >
+                            <TextBlock Text="OP08" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" />
+                        </Border>
+                        <Border x:Name="op09" Background="Gray" Width="34" Height="16" Margin="400 0 0 140" >
+                            <TextBlock Text="OP09" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" />
+                        </Border>
+                        <Border x:Name="op10" Background="Gray" Width="34" Height="16" Margin="610 300 0 00" >
+                            <TextBlock Text="OP10" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" />
+                        </Border>
+
+                        <Border x:Name="mop21" Background="Gray" Width="38" Height="16" Margin="616 350 0 0" >
+                            <TextBlock Text="MOP21" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" />
+                        </Border>
+                        <Border x:Name="mop22" Background="Gray" Width="38" Height="16" Margin="430 0 0 300" >
+                            <TextBlock Text="MOP22" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" />
+                        </Border>
+                        <Border x:Name="mop23" Background="Gray" Width="38" Height="16" Margin="0 0 40 400" >
+                            <TextBlock Text="MOP23" HorizontalAlignment="Center" FontSize="10" VerticalAlignment="Center" />
+                        </Border>
+
+                        <Grid Width="48" Height="18" Background="#FFEA8000" Margin="60 0 0 407">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="6"/>
+                                <ColumnDefinition Width="36"/>
+                                <ColumnDefinition Width="6"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" BorderBrush="White" BorderThickness="0.5" Width="6" Margin="0">
+                                <Canvas>
+                                    <!-- X자 선 (왼쪽 위 → 오른쪽 아래) -->
+                                    <Line X1="0" Y1="0" X2="5" Y2="18" Stroke="White" StrokeThickness="0.5"/>
+                                    <Line X1="5" Y1="0" X2="0" Y2="18" Stroke="White" StrokeThickness="0.5"/>
+                                </Canvas>
+                            </Border>
+                            <Border Grid.Column="1" BorderBrush="White" BorderThickness="0 0.5" />
+                            <Border Grid.Column="2" BorderBrush="White" BorderThickness="0.5" Width="6">
+                                <Canvas>
+                                    <!-- X자 선 (왼쪽 위 → 오른쪽 아래) -->
+                                    <Line X1="0" Y1="0" X2="5" Y2="18" Stroke="White" StrokeThickness="0.5"/>
+                                    <Line X1="5" Y1="0" X2="0" Y2="18" Stroke="White" StrokeThickness="0.5"/>
+
+                                </Canvas>
+                            </Border>
+                        </Grid>
+
+                        <Grid Width="48" Height="21" Background="#FFEA8000" Margin="500 0 0 300" RenderTransformOrigin="0.5,0.5">
+                            <Grid.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="90"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Grid.RenderTransform>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="6"/>
+                                <ColumnDefinition Width="36"/>
+                                <ColumnDefinition Width="6"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" BorderBrush="White" BorderThickness="0.5" Width="6" Margin="0">
+                                <Canvas>
+                                    <!-- X자 선 (왼쪽 위 → 오른쪽 아래) -->
+                                    <Line X1="0" Y1="0" X2="5" Y2="20" Stroke="White" StrokeThickness="0.5"/>
+                                    <Line X1="5" Y1="0" X2="0" Y2="20" Stroke="White" StrokeThickness="0.5"/>
+                                </Canvas>
+                            </Border>
+                            <Border Grid.Column="1" BorderBrush="White" BorderThickness="0 0.5" />
+                            <Border Grid.Column="2" BorderBrush="White" BorderThickness="0.5" Width="6">
+                                <Canvas>
+                                    <!-- X자 선 (왼쪽 위 → 오른쪽 아래) -->
+                                    <Line X1="0" Y1="0" X2="5" Y2="20" Stroke="White" StrokeThickness="0.5"/>
+                                    <Line X1="5" Y1="0" X2="0" Y2="20" Stroke="White" StrokeThickness="0.5"/>
+
+                                </Canvas>
+                            </Border>
+                        </Grid>
+                        <Grid Width="48" Height="21" Background="#FFEA8000" Margin="600 420 -70 0" RenderTransformOrigin="0.5,0.5">
+                            <Grid.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="90"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Grid.RenderTransform>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="6"/>
+                                <ColumnDefinition Width="36"/>
+                                <ColumnDefinition Width="6"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" BorderBrush="White" BorderThickness="0.5" Width="6" Margin="0">
+                                <Canvas>
+                                    <!-- X자 선 (왼쪽 위 → 오른쪽 아래) -->
+                                    <Line X1="0" Y1="0" X2="5" Y2="20" Stroke="White" StrokeThickness="0.5"/>
+                                    <Line X1="5" Y1="0" X2="0" Y2="20" Stroke="White" StrokeThickness="0.5"/>
+                                </Canvas>
+                            </Border>
+                            <Border Grid.Column="1" BorderBrush="White" BorderThickness="0 0.5" />
+                            <Border Grid.Column="2" BorderBrush="White" BorderThickness="0.5" Width="6">
+                                <Canvas>
+                                    <!-- X자 선 (왼쪽 위 → 오른쪽 아래) -->
+                                    <Line X1="0" Y1="0" X2="5" Y2="20" Stroke="White" StrokeThickness="0.5"/>
+                                    <Line X1="5" Y1="0" X2="0" Y2="20" Stroke="White" StrokeThickness="0.5"/>
+
+                                </Canvas>
+                            </Border>
+                        </Grid>
+
+                        <Grid Width="48" Height="34" Background="#FFEA8000" Margin="459 242 0 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="6"/>
+                                <ColumnDefinition Width="36"/>
+                                <ColumnDefinition Width="6"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" BorderBrush="White" BorderThickness="0.5" Width="6" Margin="0">
+                                <Canvas>
+                                    <!-- X자 선 (왼쪽 위 → 오른쪽 아래) -->
+                                    <Line X1="0" Y1="0" X2="5" Y2="34" Stroke="White" StrokeThickness="0.5"/>
+                                    <Line X1="5" Y1="0" X2="0" Y2="34" Stroke="White" StrokeThickness="0.5"/>
+                                </Canvas>
+                            </Border>
+                            <Border Grid.Column="1" BorderBrush="White" BorderThickness="0 0.5" />
+                            <Border Grid.Column="2" BorderBrush="White" BorderThickness="0.5" Width="6">
+                                <Canvas>
+                                    <!-- X자 선 (왼쪽 위 → 오른쪽 아래) -->
+                                    <Line X1="0" Y1="0" X2="5" Y2="34" Stroke="White" StrokeThickness="0.5"/>
+                                    <Line X1="5" Y1="0" X2="0" Y2="34" Stroke="White" StrokeThickness="0.5"/>
+
+                                </Canvas>
+                            </Border>
+                        </Grid>
+                        <Grid Width="48" Height="34" Background="#FFEA8000" Margin="315 242 0 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="6"/>
+                                <ColumnDefinition Width="36"/>
+                                <ColumnDefinition Width="6"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" BorderBrush="White" BorderThickness="0.5" Width="6" Margin="0">
+                                <Canvas>
+                                    <!-- X자 선 (왼쪽 위 → 오른쪽 아래) -->
+                                    <Line X1="0" Y1="0" X2="5" Y2="34" Stroke="White" StrokeThickness="0.5"/>
+                                    <Line X1="5" Y1="0" X2="0" Y2="34" Stroke="White" StrokeThickness="0.5"/>
+                                </Canvas>
+                            </Border>
+                            <Border Grid.Column="1" BorderBrush="White" BorderThickness="0 0.5" />
+                            <Border Grid.Column="2" BorderBrush="White" BorderThickness="0.5" Width="6">
+                                <Canvas>
+                                    <!-- X자 선 (왼쪽 위 → 오른쪽 아래) -->
+                                    <Line X1="0" Y1="0" X2="5" Y2="34" Stroke="White" StrokeThickness="0.5"/>
+                                    <Line X1="5" Y1="0" X2="0" Y2="34" Stroke="White" StrokeThickness="0.5"/>
+
+                                </Canvas>
+                            </Border>
+                        </Grid>
+
+                        <Grid Width="40" Height="40" Margin="459 0 0 84">
+                            <Ellipse Fill="LightGray" Stroke="Gray" StrokeThickness="1" Width="40" Height="40"/>
+                        </Grid>
+
+                        <Border x:Name="bdReady701" Width="36" Height="21" Background="Red" Margin="0 0 468 590"/>
+                        <Border x:Name="bdReady704" Width="36" Height="21" Background="Red" Margin="0 0 252 590"/>
+
+                        <StackPanel Grid.Column="0" Width="18" Height="380" Margin="0 0 666 230">
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="01" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="02" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="03" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="04" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="05" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="06" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="07" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="08" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="09" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="10" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="11" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="12" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="13" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="14" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="15" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="16" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="17" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 0">
+                                <TextBlock Text="18" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 0 1">
+                                <TextBlock Text="19" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Grid.Column="0" Width="34" Height="380" Margin="0 0 612 230">
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1">
+                                <TextBlock Text="8열" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Grid.Column="0" Width="34" Height="360" Margin="0 0 468 210">
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1">
+                                <TextBlock Text="7열" FontSize="12"  Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Grid.Column="0" Width="34" Height="380" Margin="0 0 396 230">
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1">
+                                <TextBlock Text="6열" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Grid.Column="0" Width="34" Height="360" Margin="0 0 252 210">
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1 1 1 0"/>
+                            <Border Background="#FFDADADA" Height="20" BorderBrush="#FF178600" BorderThickness="1">
+                                <TextBlock Text="5열" FontSize="12" Height="12" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </StackPanel>
+
+                        <Grid Width="10" Height="401" Margin="0 0 539 226">
+                            <Line X1="0" Y1="0" X2="10" Y2="0" Stroke="Black" StrokeThickness="1"/>
+                            <Line X1="5" Y1="0" X2="5" Y2="400" Stroke="Black" StrokeThickness="1"/>
+                            <Line X1="0" Y1="400" X2="10" Y2="400" Stroke="Black" StrokeThickness="1"/>
+                        </Grid>
+                        <Grid Width="10" Height="401" Margin="0 0 324 226">
+                            <Line X1="0" Y1="0" X2="10" Y2="0" Stroke="Black" StrokeThickness="1"/>
+                            <Line X1="5" Y1="0" X2="5" Y2="400" Stroke="Black" StrokeThickness="1"/>
+                            <Line X1="0" Y1="400" X2="10" Y2="400" Stroke="Black" StrokeThickness="1"/>
+                        </Grid>
+
+                        <Canvas Width="26" Height="30" Margin="0 0 539 588" MouseLeftButtonDown="bdScc2_MouseLeftButtonDown">
+                            <Border x:Name="bdScc2F2" Width="26" Height="30" Padding="1">
+                                <Border.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFE6E6E6"/>
+                                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                                        <GradientStop Color="#FFAFAFAF" Offset="0.5"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Border x:Name="bdMode2F2" Grid.Row="0" BorderBrush="DarkGray" BorderThickness="1 1 1 0.5" Background="White">
+                                        <TextBlock x:Name="txtMode2F2" Text="A" FontSize="11" Height="11" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                    <Border x:Name="bdCargo2F2" Grid.Row="1" BorderBrush="DarkGray" BorderThickness="1 0.5 1 1" Background="#FF0070C0">
+                                        <TextBlock x:Name="txtCargo2F2" Text="" FontSize="11" Height="11" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </Grid>
+                            </Border>
+                        </Canvas>
+                        <Canvas Width="26" Height="30" Margin="0 0 324 588" MouseLeftButtonDown="bdScc1_MouseLeftButtonDown">
+                            <Border x:Name="bdScc2F1" Width="26" Height="30" Padding="1">
+                                <Border.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFE6E6E6"/>
+                                        <GradientStop Color="#FFE6E6E6" Offset="1"/>
+                                        <GradientStop Color="#FFAFAFAF" Offset="0.5"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Border x:Name="bdMode2F1" Grid.Row="0" BorderBrush="DarkGray" BorderThickness="1 1 1 0.5" Background="White">
+                                        <TextBlock x:Name="txtMode2F1" Text="A" FontSize="11" Height="11" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                    <Border x:Name="bdCargo2F1" Grid.Row="1" BorderBrush="DarkGray" BorderThickness="1 0.5 1 1" Background="LimeGreen">
+                                        <TextBlock x:Name="txtCargo2F1" Text="" FontSize="11" Height="11" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </Grid>
+                            </Border>
+                        </Canvas>
+
+                        <StackPanel Width="36" Height="76" Margin="0 0 468 647">
+                            <Border Height="5" Style="{StaticResource equipBd}" Background="#FFE8E8E8"/>
+                            <Border x:Name="s703" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="703" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s702" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="702" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border Height="10" Style="{StaticResource equipBd}" Background="#FFE8E8E8"/>
+                            <Border x:Name="s701" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="701" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Width="36" Height="76" Margin="0 0 252 647">
+                            <Border Height="5" Style="{StaticResource equipBd}" Background="#FFE8E8E8"/>
+                            <Border x:Name="s706" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="706" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s705" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="705" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border Height="10" Style="{StaticResource equipBd}" Background="#FFE8E8E8"/>
+                            <Border x:Name="s704" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="704" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Width="300" Height="19" Margin="0 0 204 742">
+                            <Border x:Name="s707" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="707" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border Width="6" Style="{StaticResource equipBd}" Background="#FFE8E8E8"/>
+                            <Border x:Name="s708" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="708" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border Width="26" Style="{StaticResource equipBd}" Background="#FFE8E8E8"/>
+                            <Border x:Name="s709" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="709" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s710" Style="{StaticResource equipBd}" Width="28" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="710" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s711" Style="{StaticResource equipBd}" Width="28" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="711" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s712" Style="{StaticResource equipBd}" Width="28" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="712" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s713" Style="{StaticResource equipBd}" Width="28" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="713" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s714" Style="{StaticResource equipBd}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="714" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                        </StackPanel>
+
+                        <StackPanel Width="36" Height="191" Margin="60 0 0 531">
+                            <Border x:Name="s715" Style="{StaticResource equipBdSp3}" Height="13" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="715" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s716" Style="{StaticResource equipBdSp3}" Height="13" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="716" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s717" Style="{StaticResource equipBdSp3}" Height="13" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="717" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s718" Style="{StaticResource equipBdSp3}" Height="13" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="718" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s719" Style="{StaticResource equipBdSp3}" Height="13" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="719" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s720" Style="{StaticResource equipBdSp3}" Height="13" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="720" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s721" Style="{StaticResource equipBdSp3}" Height="13" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="721" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s722" Style="{StaticResource equipBdSp3}" Height="13" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="722" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s723" Style="{StaticResource equipBdSp3}" Height="13" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="723" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s724" Style="{StaticResource equipBdSp3}" Height="13" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="724" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s725" Style="{StaticResource equipBdSp3}" Height="13" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="725" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Width="96" Height="16" Margin="120 0 0 377">
+                            <Border x:Name="s726" Style="{StaticResource equipBdSp3}" Height="13" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="726" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border Width="22" Style="{StaticResource equipBd}" Height="13" Background="#FFE8E8E8"/>
+                            <Border x:Name="s727" Style="{StaticResource equipBdSp3}" Height="13" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="727" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                        </StackPanel>
+
+
+                        <StackPanel Orientation="Vertical" Width="20" Height="396" Margin="547 60 0 0">
+                            <Border x:Name="s603" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="603" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s602" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="602" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s601" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="601" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s600" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="600" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s599" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="599" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s598" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="598" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s597" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="597" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s596" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="596" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s595" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="595" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s594" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="594" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s593" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="593" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Width="61" Height="36" Margin="628 420 0 0">
+                            <Border x:Name="s592" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="592" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border x:Name="s591" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="591" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border Width="4"/>
+                            <Border x:Name="s590_2" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="590" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                        </StackPanel>
+
+
+                        <StackPanel Width="36" Height="142" Margin="180 0 0 220">
+                            <Border x:Name="s728" Style="{StaticResource equipBdSp3}" Height="13" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="728" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s729" Style="{StaticResource equipBdSp3}" Height="13" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="729" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s730" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="730" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s731" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="731" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s732" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="732" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s733" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="733" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s734" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="734" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s735" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="735" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s736" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="736" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                        </StackPanel>
+
+                        <StackPanel Width="36" Height="448" Margin="315 338 0 0">
+                            <Border x:Name="s737" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="737" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s738" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="738" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s739" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="739" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s740" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="740" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s741" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="741" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s742" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="742" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s743" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="743" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s744" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="744" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s745" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="745" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s746" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="746" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s747" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="747" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s748" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="748" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s749" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="749" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s750" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="750" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s751" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="751" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s752" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="752" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s753" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="753" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s754" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="754" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s755" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="755" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s756" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="756" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s508_2" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="508" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s507_2" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="507" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s506_2" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="506" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s505_2" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="505" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s504_2" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="504" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s503_2" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="503" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s502_2" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="502" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s501_2" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="501" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Width="36" Height="416" Margin="459 370 0 0">
+                            <Border x:Name="s774" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="774" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s773" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="773" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s772" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="772" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s771" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="771" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s770" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="770" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s769" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="769" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s768" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="768" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s767" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="767" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s766" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="766" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s765" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="765" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s764" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="764" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s763" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="763" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s762" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="762" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s761" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="761" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s760" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="760" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s759" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="759" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s758" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="758" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s757" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="757" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s621_2" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="621" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s622_2" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="622" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s623_2" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="623" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s624_2" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="624" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s625_2" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="625" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s626_2" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="626" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s627_2" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="627" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                            <Border x:Name="s628_2" Style="{StaticResource equipBdSp3}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="628" Style="{StaticResource txtMonitor}"/>
+                            </Border>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Width="44" Height="36" Margin="484 0 0 84">
+                            <Border x:Name="s775" Style="{StaticResource equipBd2}" MouseLeftButtonDown="MouseLeft_Down">
+                                <TextBlock Text="775" Style="{StaticResource txtMonitor}">
+                                    <TextBlock.LayoutTransform>
+                                        <RotateTransform Angle="90"/>
+                                    </TextBlock.LayoutTransform>
+                                </TextBlock>
+                            </Border>
+                            <Border Style="{StaticResource equipBd2}" Width="10" Margin="14 0 0 0" Background="#FFE8E8E8"/>
+                        </StackPanel>
+
+                        <Border x:Name="s604_2" Style="{StaticResource equipBd2}" Margin="500 0 0 300" MouseLeftButtonDown="MouseLeft_Down">
+                            <TextBlock Text="604" Style="{StaticResource txtMonitor}">
+                                <TextBlock.LayoutTransform>
+                                    <RotateTransform Angle="90"/>
+                                </TextBlock.LayoutTransform>
+                            </TextBlock>
+                        </Border>
+
+                        <Border Width="26" Style="{StaticResource equipBd}" Height="14" Background="#FFE8E8E8" Margin="247 0 0 94"/>
+
+                        <Image x:Name="arow708" Source="/Images/긴화살표4.png" Width="34" Height="34" Margin="0 -10 360 760" IsHitTestVisible="False" RenderTransformOrigin="0.5,0.5"/>
+                        <Image x:Name="arow706" Source="/Images/긴화살표3.png" Width="34" Height="34" Margin="0 0 190 698" IsHitTestVisible="False" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="0"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <Image x:Name="arow714" Source="/Images/긴화살표4.png" Width="34" Height="34" Margin="106 0 0 744" IsHitTestVisible="False" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="90"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                        <Image x:Name="arow713" Source="/Images/긴화살표4.png" Width="34" Height="34" Margin="0 -10 6 760" IsHitTestVisible="False" RenderTransformOrigin="0.5,0.5"/>
+
+
+
+
+
+                    </Grid>
+                </Border>
+
+                <!--상태-->
+                <Border Grid.Column="2" Grid.RowSpan="2" Margin="0 5 0 0" Background="#FFE9ECEF" BorderBrush="#FFC1C2C3" BorderThickness="1" Padding="10 5">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="110"/>
+                            <RowDefinition Height="200"/>
+                            <RowDefinition Height="360"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Border Grid.Row="0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="24"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Text="통신상태" Grid.Row="0" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                <Grid Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20"/>
+                                        <RowDefinition Height="24"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Border x:Name="bdCvcStatus" Grid.Column="0" Background="Red" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+                                    <Border x:Name="bdSccStatus" Grid.Column="1" Background="Red" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+                                    <Border x:Name="bdBr1Status" Grid.Column="2" Background="Red" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+                                    <Border x:Name="bdBr2Status" Grid.Column="3" Background="Red" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+                                    <Border Grid.Column="4" Background="Transparent" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+                                    <Border Grid.Column="5" Background="Transparent" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+                                    <Border Grid.Column="6" Background="Transparent" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+                                    <Border x:Name="bdRfStatus" Grid.Column="7" Background="Transparent" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+                                    <Border Grid.Column="8" Background="Transparent" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+                                    <Border Grid.Column="9" Background="Transparent" BorderBrush="LightGray" BorderThickness="1" Margin="1"/>
+
+                                    <TextBlock Grid.Column="0" Grid.Row="1" Text="CVC" FontSize="10" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                                    <TextBlock Grid.Column="1" Grid.Row="1" Text="SCC" FontSize="10" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                                    <TextBlock Grid.Column="2" Grid.Row="1" Text="BR1" FontSize="10" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                                    <TextBlock Grid.Column="3" Grid.Row="1" Text="BR2" FontSize="10" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                                    <TextBlock Grid.Column="4" Grid.Row="1" Text="" FontSize="10" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                                    <TextBlock Grid.Column="5" Grid.Row="1" Text="" FontSize="10" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                                    <TextBlock Grid.Column="6" Grid.Row="1" Text="" FontSize="10" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                                    <TextBlock Grid.Column="7" Grid.Row="1" Text="" FontSize="10" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                                </Grid>
+                            </Grid>
+                        </Border>
+
+                        <!--컨베이어 정보-->
+                        <Border Grid.Row="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="24"/>
+                                    <RowDefinition Height="24"/>
+                                    <RowDefinition Height="24"/>
+                                    <RowDefinition Height="24"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Text="컨베이어 정보" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                <TextBlock Grid.ColumnSpan="2" Grid.Row="1" Text="컨베이어 1라인" FontSize="12" Foreground="DimGray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                                <Grid Grid.Column="0" Grid.Row="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="30"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Grid.Column="0" Height="20" Background="#FF4C6EF5" BorderBrush="LightGray" BorderThickness="1"/>
+                                    <TextBlock Grid.Column="1" Text="화물O 데이터O" FontSize="12" Foreground="Blue" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Grid>
+                                <Grid Grid.Column="0" Grid.Row="3">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="30"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Grid.Column="0" Height="20" Background="#FFF9D594" BorderBrush="LightGray" BorderThickness="1"/>
+                                    <TextBlock Grid.Column="1" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+                          <Run Text="화물X" Foreground="Red"/>
+                          <Run Text="" />
+                          <Run Text="데이터O" Foreground="Blue"/>
+                                    </TextBlock>
+                                </Grid>
+                                <Grid Grid.Column="1" Grid.Row="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="30"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Grid.Column="0" Height="20" Background="#FF57D46E" BorderBrush="LightGray" BorderThickness="1"/>
+                                    <TextBlock Grid.Column="1" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center">
+                          <Run Text="화물O" Foreground="Blue"/>
+                          <Run Text="데이터X" Foreground="Red"/>
+                                    </TextBlock>
+                                </Grid>
+                                <Grid Grid.Column="1" Grid.Row="3">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="30"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Grid.Column="0" Height="20" Background="White" BorderBrush="LightGray" BorderThickness="1"/>
+                                    <TextBlock Grid.Column="1" Text="화물X 데이터X" FontSize="12" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Grid>
+                            </Grid>
+
+                        </Border>
+
+                        <Border Grid.Row="2">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="24"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Text="스태커크레인 상태" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                <Grid Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.21*"/>
+                                        <ColumnDefinition Width="0.29*"/>
+                                        <ColumnDefinition Width="10"/>
+                                        <ColumnDefinition Width="0.21*"/>
+                                        <ColumnDefinition Width="0.29*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="24"/>
+                                        <RowDefinition Height="24"/>
+                                        <RowDefinition Height="24"/>
+                                        <RowDefinition Height="24"/>
+                                        <RowDefinition Height="24"/>
+                                        <RowDefinition Height="24"/>
+                                        <RowDefinition Height="24"/>
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="호기" Grid.Column="0" Grid.Row="0" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                    <ComboBox x:Name="cbSccNo" Grid.Column="1" Grid.Row="0" Margin="1" Height="22"
+                            Style="{StaticResource TrackCbStyle}" SelectionChanged="cbSccNo_SelectionChanged"/>
+
+                                    <TextBlock Text="작업모드" Grid.Column="0" Grid.Row="1" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                    <Border Grid.Column="1" Grid.Row="1" Background="White" BorderBrush="LightGray" BorderThickness="1" Margin="1">
+                                        <TextBlock x:Name="txtWbit14" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5 0 0 0"/>
+                                    </Border>
+
+                                    <TextBlock Text="화물유무" Grid.Column="0" Grid.Row="2" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                    <Border Grid.Column="1" Grid.Row="2" Background="White" BorderBrush="LightGray" BorderThickness="1" Margin="1">
+                                        <TextBlock x:Name="txtWbit08" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5 0 0 0"/>
+                                    </Border>
+
+                                    <TextBlock Text="작업상태" Grid.Column="0" Grid.Row="3" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                    <Border Grid.Column="1" Grid.Row="3" Background="White" BorderBrush="LightGray" BorderThickness="1" Margin="1">
+                                        <TextBlock x:Name="txtScioStatus" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5 0 0 0"/>
+                                    </Border>
+
+                                    <TextBlock Text="작업구분" Grid.Column="0" Grid.Row="4" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                    <Border Grid.Column="1" Grid.Row="4" Background="White" BorderBrush="LightGray" BorderThickness="1" Margin="1">
+                                        <TextBlock x:Name="txtScioType" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5 0 0 0"/>
+                                    </Border>
+
+                                    <TextBlock Text="작업번호" Grid.Column="0" Grid.Row="5" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                    <Border Grid.Column="1" Grid.Row="5" Background="White" BorderBrush="LightGray" BorderThickness="1" Margin="1">
+                                        <TextBlock FontSize="12" x:Name="txtScioIdx" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5 0 0 0"/>
+                                    </Border>
+
+                                    <TextBlock Text="설비통신" Grid.Column="3" Grid.Row="0" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                    <Border Grid.Column="4" Grid.Row="0" Background="White" BorderBrush="LightGray" BorderThickness="1" Margin="1">
+                                        <TextBlock x:Name="txtWbit15" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5 0 0 0"/>
+                                    </Border>
+
+                                    <TextBlock Text="설비상태" Grid.Column="3" Grid.Row="1" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                    <Border Grid.Column="4" Grid.Row="1" Background="White" BorderBrush="LightGray" BorderThickness="1" Margin="1">
+                                        <TextBlock x:Name="txtWbit10" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5 0 0 0"/>
+                                    </Border>
+
+                                    <TextBlock Text="포크상태" Grid.Column="3" Grid.Row="2" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                    <Border Grid.Column="4" Grid.Row="2" Background="White" BorderBrush="LightGray" BorderThickness="1" Margin="1">
+                                        <TextBlock x:Name="txtWbit07" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5 0 0 0"/>
+                                    </Border>
+
+                                    <TextBlock Text="에러상태" Grid.Column="3" Grid.Row="3" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                    <Border Grid.Column="4" Grid.Row="3" Background="White" BorderBrush="LightGray" BorderThickness="1" Margin="1">
+                                        <TextBlock x:Name="txtWbit13" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5 0 0 0"/>
+                                    </Border>
+
+                                    <TextBlock Text="현재위치" Grid.Column="3" Grid.Row="4" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                    <Border Grid.Column="4" Grid.Row="4" Background="White" BorderBrush="LightGray" BorderThickness="1" Margin="1">
+                                        <TextBlock x:Name="txtWbit16" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5 0 0 0"/>
+                                    </Border>
+
+
+                                    <TextBlock Text="작업위치" Grid.Column="3" Grid.Row="5" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                    <Border Grid.Column="4" Grid.Row="5" Background="White" BorderBrush="LightGray" BorderThickness="1" Margin="1">
+                                        <TextBlock FontSize="12" x:Name="txtScioLoc" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5 0 0 0"/>
+                                    </Border>
+
+                                    <StackPanel Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Right">
+                                        <Button x:Name="btnScClear" Content="초기화" Width="45" Margin="1" Style="{StaticResource btnSet}" Click="btnScClear_Click"/>
+                                    </StackPanel>
+
+
+
+                                </Grid>
+                            </Grid>
+                        </Border>
+
+                        <Grid Grid.Row="3">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="24"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Text="컨베이어 상태" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.3*"/>
+                                    <ColumnDefinition Width="0.7*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="24"/>
+                                    <RowDefinition Height="24"/>
+                                    <RowDefinition Height="24"/>
+                                    <RowDefinition Height="24"/>
+                                    <RowDefinition Height="24"/>
+                                    <RowDefinition Height="24"/>
+                                    <RowDefinition Height="24"/>
+                                    <RowDefinition Height="24"/>
+                                    <RowDefinition Height="24"/>
+                                    <RowDefinition Height="24"/>
+                                    <RowDefinition Height="24"/>
+                                    <RowDefinition Height="24"/>
+                                    <RowDefinition Height="24"/>
+                                    <RowDefinition Height="24"/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Text="작업상태" Grid.Column="0" Grid.Row="0" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                <Border Grid.Column="1" Grid.Row="0" Background="White" BorderBrush="LightGray" BorderThickness="1" Margin="1">
+                                    <TextBlock x:Name="txtType" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 0 0 0"/>
+                                </Border>
+
+                                <TextBlock Text="작업번호" Grid.Column="0" Grid.Row="1" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                <Border Grid.Column="1" Grid.Row="1" Background="White" BorderBrush="LightGray" BorderThickness="1" Margin="1">
+                                    <TextBlock x:Name="txtOrder" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 0 0 0"/>
+                                </Border>
+
+                                <TextBlock Text="입고위치"  Grid.Column="0" Grid.Row="2" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                                <Border Grid.Column="1" Grid.Row="2" Background="White" BorderBrush="LightGray" BorderThickness="1" Margin="1">
+                                    <TextBlock x:Name="txtLoc" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 0 0 0"/>
+                                </Border>
+
+                                <TextBlock Text="적재코드" Grid.Column="0" Grid.Row="3" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                <ComboBox x:Name="cbLoadCode" Grid.Column="1" Grid.Row="3" Style="{StaticResource CellCbStyle}" FontSize="12" Margin="1" Height="22"
+                              />
+
+                                <TextBlock Text="CV상태" Grid.Column="0" Grid.Row="4" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                <Border Grid.Column="1" Grid.Row="4" Background="White" BorderBrush="LightGray" BorderThickness="1" Margin="1">
+                                    <TextBlock x:Name="txtCvStatus" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 0 0 0"/>
+                                </Border>
+
+
+                                <TextBlock Text="LOT no1" Grid.Column="0" Grid.Row="5" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                <TextBox x:Name="tbLotno1" FontSize="12" Grid.Column="1" Grid.Row="5" BorderBrush="LightGray" Margin="1" Padding="10 0 0 0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"  MaxLength="24"/>
+
+
+                                <TextBlock Text="LOT no2" Grid.Column="0" Grid.Row="6" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                <TextBox x:Name="tbLotno2" FontSize="12" Grid.Column="1" Grid.Row="6" BorderBrush="LightGray" Margin="1" Padding="10 0 0 0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"  MaxLength="24"/>
+
+                                <TextBlock Text="LOT no3" Grid.Column="0" Grid.Row="7" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                <TextBox x:Name="tbLotno3" FontSize="12" Grid.Column="1" Grid.Row="7" BorderBrush="LightGray" Margin="1" Padding="10 0 0 0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"  MaxLength="24"/>
+
+
+                                <TextBlock Text="LOT no4" Grid.Column="0" Grid.Row="8" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                <TextBox x:Name="tbLotno4" FontSize="12" Grid.Column="1" Grid.Row="8" BorderBrush="LightGray" Margin="1" Padding="10 0 0 0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"  MaxLength="24"/>
+
+
+                                <TextBlock Text="LOT no5" Grid.Column="0" Grid.Row="9" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                <TextBox x:Name="tbLotno5" FontSize="12" Grid.Column="1" Grid.Row="9" BorderBrush="LightGray" Margin="1" Padding="10 0 0 0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"  MaxLength="24"/>
+
+                                <TextBlock Text="파레트코드" Grid.Column="0" Grid.Row="10" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                <TextBox x:Name="tbPlt" FontSize="12" Grid.Column="1" Grid.Row="10" BorderBrush="LightGray" Margin="1" Padding="10 0 0 0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" MaxLength="6"/>
+
+                                <TextBlock Text="COMMIT NO" Grid.Column="0" Grid.Row="11" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                <TextBox x:Name="tbCommit" FontSize="12" Grid.Column="1" Grid.Row="11" BorderBrush="LightGray" Margin="1" Padding="10 0 0 0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" MaxLength="4"/>
+
+                                <TextBlock Text="BODY NO" Grid.Column="0" Grid.Row="12" FontSize="12" Foreground="DimGray" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                                <TextBox x:Name="tbBody" FontSize="12" Grid.Column="1" Grid.Row="12" BorderBrush="LightGray" Margin="1" Padding="10 0 0 0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" MaxLength="10"/>
+
+                                <Grid Grid.Row="13" Grid.ColumnSpan="2">
+                                    <Button x:Name="btnUpdate" Content="수정" Width="45" Margin="1" Style="{StaticResource btnSet}" HorizontalAlignment="Right" Click="btnUpdate_Click"/>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+
+                        <!--CV 데이터-->
+                        <Grid Grid.Row="4">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="24"/>
+                                <RowDefinition Height="24"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="CV 데이터" Grid.Row="0" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"/>
+                                    <ColumnDefinition Width="65"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border Grid.Column="0" Grid.Row="0" Background="White" BorderBrush="LightGray" BorderThickness="1" Margin="2">
+                                    <TextBlock x:Name="txtBuff" FontSize="12" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 0 0 0"/>
+                                </Border>
+
+                                <TextBox x:Name="txtBuffTarget" Grid.Column="1" Grid.Row="3" Height="20" VerticalContentAlignment="Center" 
+                           HorizontalContentAlignment="Center" PreviewTextInput="txtBuffTarget_PreviewTextInput" 
+                           PreviewKeyDown="txtBuffTarget_PreviewKeyDown" MaxLength="3" 
+                           IsReadOnly="False" PreviewMouseLeftButtonDown="txtBuffTarget_PreviewMouseLeftButtonDown"/>
+
+                                <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                                    <Button x:Name="btnCvcMove" Content="이동" Width="45" Margin="1" Style="{StaticResource btnSet}" Click="btnCvcMove_Click"/>
+                                    <Button x:Name="btnCvcDel" Content="삭제" Width="45" Margin="1" Style="{StaticResource btnSet}" Click="btnCvcDel_Click"/>
+                                    <Button x:Name="btnCvcSwap" Content="교환" Width="45" Margin="1" Style="{StaticResource btnSet}" Click="btnCvcSwap_Click"/>
+                                </StackPanel>
+
+
+                            </Grid>
+                        </Grid>
+
+                        <!--CV 지시-->
+                        <Grid Grid.Row="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="24"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="CV 지시" Grid.Row="0" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="24"/>
+                                    <RowDefinition Height="24"/>
+                                </Grid.RowDefinitions>
+
+                                <Button x:Name="btnCvGo" Grid.Column="0" Grid.Row="0" Content="직진지시" Margin="1" Style="{StaticResource btnSet}" Click="btnCvGo_Click"/>
+                                <Button x:Name="btnCvGoComp" Grid.Column="0" Grid.Row="1" Content="직진완료" Margin="1" Style="{StaticResource btnSet}" Click="btnCvGoComp_Click"/>
+                                <Button x:Name="btnCvQua" Grid.Column="1" Grid.Row="0" Content="분기지시" Margin="1" Style="{StaticResource btnSet}" Click="btnCvQua_Click"/>
+                                <Button x:Name="btnCvQuaComp" Grid.Column="1" Grid.Row="1" Content="분기완료" Margin="1" Style="{StaticResource btnSet}" Click="btnCvQuaComp_Click"/>
+                                <Button x:Name="btnCvJoin" Grid.Column="2" Grid.Row="0" Content="합류지시" Margin="1" Style="{StaticResource btnSet}" Click="btnCvJoin_Click"/>
+                                <Button x:Name="btnCvJoinComp" Grid.Column="2" Grid.Row="1" Content="합류완료" Margin="1" Style="{StaticResource btnSet}" Click="btnCvJoinComp_Click"/>
+
+                            </Grid>
+                        </Grid>
+
+                    </Grid>
+                </Border>
+
+                <!--바코드 리딩정보, 의장/도장 수신정보-->
+                <Border Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1"  BorderBrush="#FFC1C2C3" BorderThickness="0" Margin="0 5 -2 0">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.26*"/>
+                            <ColumnDefinition Width="0.34*"/>
+                            <ColumnDefinition Width="0.4*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!--바코드 리딩정보-->
+                        <Border Grid.Column="0" Margin="10 0 0 0" Background="#FFF5F6F7" BorderBrush="LightGray" BorderThickness="1" CornerRadius="5 5 0 0" SnapsToDevicePixels="True">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <Border Style="{StaticResource equipBd}" Width="130" Height="20" Margin="10 -2 0 0" BorderThickness="1 0 1 1" CornerRadius="0 0 3 3" Background="#FFBB4055" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                                    <TextBlock Text="바코드 리딩 정보" FontSize="14" Height="14" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold" TextWrapping="Wrap" VerticalAlignment="Center" />
+                                </Border>
+
+                                <Border Grid.Row="1" Background="#FFE1E4E8" BorderBrush="LightGray" BorderThickness="1" Margin="5 1" >
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="77"/>
+                                            <ColumnDefinition Width="1"/>
+                                            <ColumnDefinition Width="0.32*"/>
+                                            <ColumnDefinition Width="1"/>
+                                            <ColumnDefinition Width="0.32*"/>
+                                            <ColumnDefinition Width="1"/>
+                                            <ColumnDefinition Width="0.16*"/>
+                                            <ColumnDefinition Width="0.2*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <!-- 경계선 -->
+                                        <Border Grid.Column="1" Background="White" Margin="0 2" />
+                                        <Border Grid.Column="3" Background="White" Margin="0 2" />
+                                        <Border Grid.Column="5" Background="White" Margin="0 2" />
+
+                                        <Border Grid.Column="0" Background="#FFE1E4E8" >
+                                            <TextBlock Text="[입고] 561" FontSize="14" Foreground="DimGray" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                                        </Border>
+
+                                        <Border x:Name="bdBcrIn" Grid.Column="2"  Margin="0" Tag="[입고] 561" Background="Transparent" MouseLeftButtonDown="bdBcrIn_MouseLeftButtonDown">
+                                            <TextBlock x:Name="txtPltInCodeBcr" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+
+                                        <Border Grid.Column="4" >
+                                            <TextBlock x:Name="txtPltInCode" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+
+
+                                        <Border x:Name="bdBcrInOk" Grid.Column="6" >
+                                            <TextBlock x:Name="txtBcrInOk" FontSize="14" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+
+                                        <Button x:Name="btnReBcrIn" Content="재시도" FontSize="14" Grid.Column="7" Style="{StaticResource btnSet}" Margin="-1" Click="btnReBcr_Click"/>
+                                    </Grid>
+                                </Border>
+                                <Border Grid.Row="2" Background="#FFE1E4E8" BorderBrush="LightGray" BorderThickness="1" Margin="5 1" >
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="77"/>
+                                            <ColumnDefinition Width="1"/>
+                                            <ColumnDefinition Width="0.32*"/>
+                                            <ColumnDefinition Width="1"/>
+                                            <ColumnDefinition Width="0.32*"/>
+                                            <ColumnDefinition Width="1"/>
+                                            <ColumnDefinition Width="0.16*"/>
+                                            <ColumnDefinition Width="0.2*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <!-- 경계선 -->
+                                        <Border Grid.Column="1" Background="White" Margin="0 2" />
+                                        <Border Grid.Column="3" Background="White" Margin="0 2" />
+                                        <Border Grid.Column="5" Background="White" Margin="0 2" />
+
+                                        <Border Grid.Column="0" Background="#FFE1E4E8" >
+                                            <TextBlock Text="[출고] 713" FontSize="14" Foreground="DimGray" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                                        </Border>
+
+                                        <Border x:Name="bdBcrOut" Grid.Column="2" Margin="0" Tag="[출고] 713" Background="Transparent" MouseLeftButtonDown="bdBcrOut_MouseLeftButtonDown">
+                                            <TextBlock x:Name="txtPltOutCodeBcr" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+
+                                        <Border Grid.Column="4">
+                                            <TextBlock x:Name="txtPltOutCode" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+
+                                        <Border x:Name="bdBcrOutOk" Grid.Column="6" >
+                                            <TextBlock x:Name="txtBcrOutOk" Foreground="White" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+
+                                        <Button x:Name="btnReBcrOut" Content="재시도" FontSize="14" Grid.Column="7" Style="{StaticResource btnSet}" Margin="-1" Click="btnReBcrOut_Click"/>
+                                    </Grid>
+                                </Border>
+
+                                <StackPanel x:Name="stpBcrInput" Grid.Row="0" Orientation="Horizontal" Width="220" Margin="0 0 0 0" HorizontalAlignment="Right">
+                                    <TextBlock x:Name="txtBcrName" Text="" FontSize="12" Foreground="Red" FontWeight="Bold" Width="70" Margin="0 2" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"/>
+                                    <TextBox x:Name="tbBcrPlt" Width="90" FontSize="12" Margin="1" Padding="10 0 0 0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"  MaxLength="6"/>
+                                    <Button x:Name="btnBcrIn" Content="수동입력" Width="55" FontSize="12" Grid.Column="4" Margin="0" Click="btnBcrIn_Click" Style="{StaticResource btnSet}"/>
+                                </StackPanel>
+
+                            </Grid>
+                        </Border>
+
+                        <Grid Grid.Column="1" Margin="10 0" SnapsToDevicePixels="True">
+                            <!--의장 수신 정보-->
+                            <Border Background="#FFF5F6F7" BorderBrush="LightGray" BorderThickness="1" CornerRadius="5 5 0 0" Margin="0 0 0 0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+
+                                    <Border Style="{StaticResource equipBd}" Width="160" Height="20" Margin="10 -2 0 0" BorderThickness="1 0 1 1" CornerRadius="0 0 3 3" Background="#FFBB4055" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                                        <TextBlock Text="의장 수신 정보" FontSize="14" Height="14" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold" TextWrapping="Wrap" VerticalAlignment="Center" />
+                                    </Border>
+
+                                    <Border Grid.Column="0" Grid.Row="1" Background="#FFE1E4E8" BorderBrush="LightGray" BorderThickness="1"  Margin="5 2">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="40"/>
+                                                <ColumnDefinition Width="1"/>
+                                                <ColumnDefinition Width="60"/>
+                                                <ColumnDefinition Width="1"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="1"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <!-- 경계선 -->
+                                            <Border Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Background="White" Margin="0 5"/>
+                                            <Border Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="1" Background="White" Margin="0 0 5 0"/>
+                                            <Border Grid.Column="3" Grid.Row="0" Grid.RowSpan="3" Background="White" Margin="0 5"/>
+
+                                            <Border Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Background="#FFE1E4E8" >
+                                                <TextBlock Text="의장" FontSize="14" Foreground="DimGray" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+
+                                            <Border Grid.Column="2" Grid.Row="0">
+                                                <TextBlock Text="최종 수신" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+
+                                            <Border Grid.Column="4" Grid.Row="0">
+                                                <TextBlock x:Name="txtHostDate" Text="" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+
+                                            <Border Grid.Column="2" Grid.Row="2">
+                                                <TextBlock Text="수신 상태" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                            <Border Grid.Column="4" Grid.Row="2">
+                                                <TextBlock x:Name="txtHostOption" Text="" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </Grid>
+                                    </Border>
+
+                                </Grid>
+                            </Border>
+
+                        </Grid>
+
+                        <Border Grid.Column="2" Background="#FFE9ECEF" Margin="100 0 10 0" BorderBrush="LightGray" BorderThickness="1" CornerRadius="5 5 0 0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="23"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+
+                                <Border Style="{StaticResource equipBd}" Width="160" Height="22" Margin="10 -1 0 0" BorderThickness="1 0 1 1" CornerRadius="0 0 3 3" Background="#FFBB4055" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                                    <TextBlock Text="컨베이어 에러정보" FontSize="14" Height="14" Foreground="White" HorizontalAlignment="Center" FontWeight="Bold" TextWrapping="Wrap" VerticalAlignment="Center" />
+                                </Border>
+
+                                <ListBox x:Name="lbCvError" Grid.Row="1" Margin="4">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding ERR_MSG}" />
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </Grid>
+                        </Border>
+
+
+
+                    </Grid>
+                </Border>
+
+            </Grid>
+
+       
+        </Grid>
+    </Border>
+</UserControl>

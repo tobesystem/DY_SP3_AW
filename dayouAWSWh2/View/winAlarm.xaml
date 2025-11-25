@@ -1,0 +1,60 @@
+﻿<Window x:Class="dayouAWSWh2.View.winAlarm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:local="clr-namespace:dayouAWSWh2.View"
+        mc:Ignorable="d"
+        Title="winAlarm" Height="514" Width="390"  WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" AllowsTransparency="True">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.7*"/>
+        </Grid.RowDefinitions>
+
+        <Border Background="Black" Grid.Row="0" BorderBrush="Black" BorderThickness="0" CornerRadius="20,20,0,0" >
+            <StackPanel Grid.Row="0" >
+                <Border Background="Red" Height="35" Margin="30,10,30,5" CornerRadius="5">
+                    <Label Content="출하지연 알람" Style="{StaticResource LabelStyle3}" FontSize="16" Foreground="White" FontWeight="Bold" Margin="0,5,0,0"/>
+                </Border>
+                <StackPanel Orientation="Horizontal" Height="25" Margin="30,0,30,0">
+                    <Label Content="의장 수신시간 -" Style="{StaticResource LabelStyle4}" FontFamily="NanumGothic"/>
+                    <Label  Style="{StaticResource LabelStyle4}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="25" Margin="30,0,30,0">
+                    <Label Content="의장 서열정보 -" Style="{StaticResource LabelStyle4}"/>
+                    <Label  Style="{StaticResource LabelStyle4}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="25" Margin="30,0,30,0">
+                    <Label Content="출하 대기시간 -" Style="{StaticResource LabelStyle4}"/>
+                    <Label  Style="{StaticResource LabelStyle4}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="25" Margin="30,0,30,0">
+                    <Label Content="알람 설정시간 -" Style="{StaticResource LabelStyle4}"/>
+                    <Label x:Name="alarmTimeTxt" Style="{StaticResource LabelStyle4}"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="1" BorderBrush="Gray" BorderThickness="1" CornerRadius="0,0,20,20">
+            <StackPanel >
+                <Image Source="../Images/경광등.png"  Stretch="Uniform" Width="220" Height="220" Margin="0 10 0 0" />
+                <Button x:Name="btnOk" Style="{StaticResource CancelButton}" Width="120" Height="40" Margin="5,30,10,5" Click="btnOk_Click">
+                    <StackPanel Orientation="Horizontal" Margin="15 0">
+                        <Icon:PackIconMaterial Kind="CheckBold"  VerticalAlignment="Center"/>
+                        <TextBlock Text="  확인" FontWeight="Bold"/>
+                    </StackPanel>
+                </Button>
+                <CheckBox x:Name="checkBox1" Margin="25,15,25,0">
+                    <CheckBox.Content>
+                        <TextBlock Text="해당 출하건에 대하여 알람 재 발생을 금지 할 경우 체크    미 체크 시 재알람 주기마다 확인하여 알람 재 발생" FontSize="12" TextWrapping="Wrap"/>
+                    </CheckBox.Content>
+                </CheckBox>
+            </StackPanel>
+            
+        </Border>
+        
+        
+    </Grid>
+</Window>

@@ -1,0 +1,94 @@
+﻿<Window x:Class="dayouAWSWh2.View.winUserPopup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dayouAWSWh2.View"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="winPopUp" Height="480" Width="530" WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.85*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="#6741D9" Margin="0,0,0,0" BorderBrush="Gray" BorderThickness="1"  CornerRadius="20,20,0,0">
+            <Label x:Name="txtHeader" Content="사용자 관리" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="15" FontFamily="NanumGothic" FontWeight="Bold" />
+        </Border>
+
+        <Icon:PackIconMaterial Grid.Row="0" x:Name="icClose" Kind="CloseThick"  VerticalAlignment="Center" Width="10" Foreground="White" Margin="500 0 0 0" Cursor="Hand" MouseLeftButtonDown="icClose_MouseLeftButtonDown" />
+
+        <Border Grid.Row="1" Background="White" BorderBrush="Gray" BorderThickness="1,0,1,0">
+            <StackPanel  Margin="10">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="사용자 코드" Style="{StaticResource TopLabelStyle}" Width="100" Foreground="Gray" />
+                    <Label Content="*"  Width="15" Margin="-15,0,0,0" Foreground="Blue" />
+                    <Border Grid.Row="1" Grid.Column="1" Margin="0,5,30,5" BorderBrush="LightGray" BorderThickness="1" CornerRadius="2" Width="400" Height="40">
+                        <TextBox x:Name="txtUserCode" Text="" Style="{StaticResource textBoxStyle}" BorderBrush="Transparent" VerticalAlignment="Center" Margin="5" />
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="사용자명" Style="{StaticResource TopLabelStyle}" Width="100" Foreground="Gray" />
+                    <Label Content="*"  Width="15" Margin="-25,0,0,0" Foreground="Blue" />
+                    <Border Grid.Row="1" Grid.Column="1" Margin="0,5,30,5" BorderBrush="LightGray" BorderThickness="1" CornerRadius="2" Width="400" Height="40">
+                        <TextBox x:Name="txtUserName" Text="" Style="{StaticResource textBoxStyle}" BorderBrush="Transparent" VerticalAlignment="Center" Margin="5" />
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="전화번호" Style="{StaticResource TopLabelStyle}" Foreground="Gray" />
+                    <Border Grid.Row="1" Grid.Column="1" Margin="0,5,30,5" BorderBrush="LightGray" BorderThickness="1" CornerRadius="2" Width="400" Height="40">
+                        <TextBox x:Name="txtTelNo" Text="" Style="{StaticResource textBoxStyle}" BorderBrush="Transparent" VerticalAlignment="Center" Margin="5" />
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="이메일" Style="{StaticResource TopLabelStyle}" Foreground="Gray" />
+                    <Border Grid.Row="1" Grid.Column="1" Margin="0,5,10,5" BorderBrush="LightGray" BorderThickness="1" CornerRadius="2" Width="150" Height="40">
+                        <TextBox x:Name="txtEmailF" Text="" Style="{StaticResource textBoxStyle}" BorderBrush="Transparent" VerticalAlignment="Center" Margin="5" />
+                    </Border>
+                    <Label Content="@" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Width="50"/>
+                    <Border Grid.Row="1" Grid.Column="1" Margin="0,5,30,5" BorderBrush="LightGray" BorderThickness="1" CornerRadius="2" Width="190" Height="40">
+                        <TextBox x:Name="txtEmailB" Text="" Style="{StaticResource textBoxStyle}" BorderBrush="Transparent" VerticalAlignment="Center" Margin="5" />
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,5">
+                    <Label Content="권한" Style="{StaticResource TopLabelStyle}" Foreground="Gray" />
+                    <ComboBox x:Name="cbAuth" Style="{StaticResource ComboBoxStyle}" DisplayMemberPath="AUTH_NAME" SelectedValuePath="AUTH_CODE" SelectedIndex="0" Width="400" Height="40"/>
+                </StackPanel>
+
+                <StackPanel  Orientation="Horizontal" Margin="0,5,0,5">
+                    <Label Content="부서" Style="{StaticResource TopLabelStyle}" Foreground="Gray" />
+                    <ComboBox x:Name="cbDept" Style="{StaticResource ComboBoxStyle}" DisplayMemberPath="DEPT_NAME" SelectedValuePath="DEPT_CODE" SelectedIndex="0" Width="400" Height="40"/>
+                </StackPanel>
+
+                <StackPanel  Orientation="Horizontal" Margin="0,5,0,5">
+                    <Label Content="사용유무" Style="{StaticResource TopLabelStyle}" Foreground="Gray" />
+                    <ComboBox x:Name="cbUseYN" Style="{StaticResource ComboBoxStyle}" DisplayMemberPath="" SelectedIndex="0" Width="400" Height="40"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="2" Background="white" BorderBrush="Gray" BorderThickness="1,1,1,1" CornerRadius="0,0,20,20" >
+            <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="btnSave" Style="{StaticResource LoginButton}" Margin="10,5,5,5" Click="btnSave_Click">
+                    <StackPanel Orientation="Horizontal" Margin="15 0">
+                        <Icon:PackIconMaterial Kind="CheckboxMarkedCircle"  VerticalAlignment="Center"/>
+                        <TextBlock Text="  저장" FontWeight="Bold" />
+                    </StackPanel>
+                </Button>
+                <Button x:Name="btnCancel" Style="{StaticResource CancelButton}" Margin="5,5,10,5" Click="btnCancel_Click">
+                    <StackPanel Orientation="Horizontal" Margin="15 0">
+                        <Icon:PackIconMaterial Kind="Cancel"  VerticalAlignment="Center"/>
+                        <TextBlock Text="  취소" FontWeight="Bold"/>
+                    </StackPanel>
+                </Button>
+                
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

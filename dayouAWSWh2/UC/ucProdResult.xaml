@@ -1,0 +1,161 @@
+﻿<UserControl x:Class="dayouAWSWh2.UC.ucProdResult"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:dayouAWSWh2.UC"
+                     xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d" 
+        d:DesignHeight="995" d:DesignWidth="1720" KeyDown="UserControl_KeyDown">
+    <Border Padding="8">
+        <Grid Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <local:ucToolbarBtn x:Name="ucToolbarBtn" Grid.Row="0" Grid.ColumnSpan="2"/>
+
+            <Grid Grid.Row="1" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="0.5*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="530"/>
+                    <ColumnDefinition Width="530"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="200"/>
+
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="4">
+                    <Label Content="완료일시" Style="{StaticResource TopLabelStyle}" Width="80"/>
+                    <DatePicker x:Name="DatePicker1" Width="100" BorderBrush="LightGray" Margin="0,5,2,5" VerticalContentAlignment="Center" Focusable = "False" SelectedDateFormat="Short" Padding="2 7 2 0" CalendarStyle="{StaticResource CustomCalendarStyle }"/>
+
+                    <Border Grid.Row="1" Margin="0,5,1,5" BorderBrush="LightGray" BorderThickness="1" CornerRadius="2" Width="105">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox x:Name="timeTextBox" Text="" PreviewMouseDown="TimeTextBox_PreviewMouseDown" Style="{StaticResource textBoxStyle}" Width="75" BorderBrush="Transparent" VerticalAlignment="Center" Margin="5"/>
+
+                            <StackPanel Grid.Row="1" Grid.Column="0" Background="White" Width="15" Height="40" VerticalAlignment="Stretch">
+                                <Button x:Name="upBtn" Click="IncreaseTimeButton_Click" Background="White" BorderBrush="{x:Null}">
+                                    <Image Source="/Images/위.png" Width="12" Height="16" />
+                                </Button>
+                                <Button x:Name="downBtn" Click="DecreaseTimeButton_Click" Background="White" BorderBrush="{x:Null}">
+                                    <Image Source="/Images/아래.png" Width="12" Height="16" />
+                                </Button>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+
+                    <Label Content="~" Style="{StaticResource TopLabelStyle}" Width="30" FontWeight="Bold" FontSize="20"/>
+                    <DatePicker x:Name="DatePicker2" Width="100" BorderBrush="LightGray" Margin="0,5,2,5" VerticalContentAlignment="Center" Focusable = "False" SelectedDateFormat="Short" Padding="2 7 2 0" CalendarStyle="{StaticResource CustomCalendarStyle }"/>
+
+                    <Border Grid.Row="1" Margin="0,5,1,5" BorderBrush="LightGray" BorderThickness="1" CornerRadius="2" Width="105">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox x:Name="timeTextBox2" Text="" PreviewMouseDown="TimeTextBox_PreviewMouseDown" Style="{StaticResource textBoxStyle}" Width="75" BorderBrush="Transparent" VerticalAlignment="Center" Margin="5" IsReadOnly="True"/>
+
+                            <StackPanel Grid.Row="1" Grid.Column="0" Background="White" Width="15" Height="40" VerticalAlignment="Center">
+                                <Button x:Name="upBtn2" Click="IncreaseTimeButton_Click" Background="White" BorderBrush="{x:Null}">
+                                    <Image Source="/Images/위.png" Width="12" Height="16" />
+                                </Button>
+                                <Button x:Name="downBtn2" Click="DecreaseTimeButton_Click" Background="White" BorderBrush="{x:Null}">
+                                    <Image Source="/Images/아래.png" Width="12" Height="16" />
+                                </Button>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="4">
+                    <Label Content="투입일시" Style="{StaticResource TopLabelStyle}" Width="80"/>
+                    <DatePicker x:Name="DatePicker3" Width="100" BorderBrush="LightGray" Margin="0,5,2,5" VerticalContentAlignment="Center" Focusable = "False" SelectedDateFormat="Short" Padding="2 7 2 0" CalendarStyle="{StaticResource CustomCalendarStyle }"/>
+
+                    <Border Grid.Row="1" Margin="0,5,1,5" BorderBrush="LightGray" BorderThickness="1" CornerRadius="2" Width="105">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox x:Name="timeTextBox3" Text="" PreviewMouseDown="TimeTextBox_PreviewMouseDown" Style="{StaticResource textBoxStyle}" Width="75" BorderBrush="Transparent" VerticalAlignment="Center" Margin="5"/>
+
+                            <StackPanel Grid.Row="1" Grid.Column="0" Background="White" Width="15" Height="40" VerticalAlignment="Stretch">
+                                <Button x:Name="upBtn3" Click="IncreaseTimeButton_Click" Background="White" BorderBrush="{x:Null}">
+                                    <Image Source="/Images/위.png" Width="12" Height="16" />
+                                </Button>
+                                <Button x:Name="downBtn3" Click="DecreaseTimeButton_Click" Background="White" BorderBrush="{x:Null}">
+                                    <Image Source="/Images/아래.png" Width="12" Height="16" />
+                                </Button>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+
+                    <Label Content="~" Style="{StaticResource TopLabelStyle}" Width="30" FontWeight="Bold" FontSize="20"/>
+                    <DatePicker x:Name="DatePicker4" Width="100" BorderBrush="LightGray" Margin="0,5,2,5" VerticalContentAlignment="Center" Focusable = "False" SelectedDateFormat="Short" Padding="2 7 2 0" CalendarStyle="{StaticResource CustomCalendarStyle }"/>
+
+                    <Border Grid.Row="1" Margin="0,5,1,5" BorderBrush="LightGray" BorderThickness="1" CornerRadius="2" Width="105">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox x:Name="timeTextBox4" Text="" PreviewMouseDown="TimeTextBox_PreviewMouseDown" Style="{StaticResource textBoxStyle}" Width="75" BorderBrush="Transparent" VerticalAlignment="Center" Margin="5" IsReadOnly="True"/>
+
+                            <StackPanel Grid.Row="1" Grid.Column="0" Background="White" Width="15" Height="40" VerticalAlignment="Center">
+                                <Button x:Name="upBtn4" Click="IncreaseTimeButton_Click" Background="White" BorderBrush="{x:Null}">
+                                    <Image Source="/Images/위.png" Width="12" Height="16" />
+                                </Button>
+                                <Button x:Name="downBtn4" Click="DecreaseTimeButton_Click" Background="White" BorderBrush="{x:Null}">
+                                    <Image Source="/Images/아래.png" Width="12" Height="16" />
+                                </Button>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="2" Margin="1">
+                    <Label Content="차종" Style="{StaticResource TopLabelStyle}" Width="70"/>
+                    <ComboBox x:Name="cbCarCode" Style="{StaticResource ComboBoxStyle}" DisplayMemberPath="CODE_NAME" SelectedIndex="0" Width="120" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="2" Margin="1">
+                    <Label Content="ALC코드" Style="{StaticResource TopLabelStyle}" Width="70"/>
+                    <Border  BorderBrush="LightGray" BorderThickness="1" Width="120">
+                        <TextBox x:Name="txtAlcCode" Text="" Style="{StaticResource textBoxStyle}" BorderBrush="Transparent" VerticalAlignment="Center" />
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="3" Margin="1">
+                    <Label Content="COMMIT" Style="{StaticResource TopLabelStyle}" Width="70"/>
+                    <Border Grid.Row="1" BorderBrush="LightGray" BorderThickness="1" Width="120">
+                        <TextBox x:Name="txtCommit" Text="" Style="{StaticResource textBoxStyle}" BorderBrush="Transparent" VerticalAlignment="Center"/>
+                    </Border>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="3" Margin="1">
+                    <Label Content="작업상태" Style="{StaticResource TopLabelStyle}" Width="70"/>
+                    <ComboBox x:Name="cbStatus" Style="{StaticResource ComboBoxStyle}" SelectedIndex="0" Width="120"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="4" Margin="1">
+                    <Label Content="BODY NO" Style="{StaticResource TopLabelStyle}" Width="70"/>
+                    <Border Grid.Row="1" BorderBrush="LightGray" BorderThickness="1" Width="120">
+                        <TextBox x:Name="txtBodyNo" Text="" Style="{StaticResource textBoxStyle}" BorderBrush="Transparent" VerticalAlignment="Center" />
+                    </Border>
+                </StackPanel>
+
+            </Grid>
+
+            <DataGrid x:Name="prodResultDataGrid" Grid.Row="2" Style="{DynamicResource DataGridStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" >
+                <DataGrid.Columns>
+
+                    <DataGridTextColumn Header="NO" IsReadOnly="True" Width="50" Binding="{Binding LOAD_CODE}" ElementStyle="{StaticResource DataGridCellCenter}"/>
+                    <DataGridTextColumn Header="완료일시" IsReadOnly="True" Width="210" Binding="{Binding ID_BANK}" ElementStyle="{StaticResource DataGridCellCenter}"/>
+                    <DataGridTextColumn Header="품목코드" IsReadOnly="True" Width="60" Binding="{Binding ID_BAY}" ElementStyle="{StaticResource DataGridCellCenter}"/>
+                    <DataGridTextColumn Header="차종" IsReadOnly="True" Width="60" Binding="{Binding ID_LEVEL}" ElementStyle="{StaticResource DataGridCellCenter}"/>
+                    <DataGridTextColumn Header="COMMIT" IsReadOnly="True" Width="80" Binding="{Binding REGION}" ElementStyle="{StaticResource DataGridCellCenter}"/>
+                    <DataGridTextColumn Header="BODY NO" IsReadOnly="True" Width="80" Binding="{Binding PLT_CODE}" ElementStyle="{StaticResource DataGridCellCenter}"/>
+                    <DataGridTextColumn Header="지역" IsReadOnly="True" Width="100" Binding="{Binding COMMIT_NO}" ElementStyle="{StaticResource DataGridCellCenter}"/>
+                    <DataGridTextColumn Header="운전석" IsReadOnly="True" Width="50" Binding="{Binding LOT_NO1}" ElementStyle="{StaticResource DataGridCellCenter}"/>
+                    <DataGridTextColumn Header="투입일시" IsReadOnly="True" Width="210" Binding="{Binding LOT_NO2}" ElementStyle="{StaticResource DataGridCellCenter}"/>
+                    <DataGridTextColumn Header="작업상태" IsReadOnly="True" Width="80" Binding="{Binding LOT_NO3}" ElementStyle="{StaticResource DataGridCellCenter}"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+    </Border>
+</UserControl>

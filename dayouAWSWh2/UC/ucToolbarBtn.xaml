@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="dayouAWSWh2.UC.ucToolbarBtn"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:dayouAWSWh2.UC" xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d" 
+             d:DesignWidth="1400" d:DesignHeight="40" Background="#FF343A40">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="btn1" Style="{StaticResource ToolbarBtn}" 
+                   IsEnabled="{Binding ButtonStates[1], RelativeSource={RelativeSource AncestorType=UserControl}}" Click="btn1_Click">
+                <StackPanel Orientation="Horizontal" Margin="15 0">
+                    <Icon:PackIconMaterial Kind="Plus"  VerticalAlignment="Center"/>
+                    <TextBlock Text="  신규"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btn2" Style="{StaticResource ToolbarBtn}" 
+                   IsEnabled="{Binding ButtonStates[2], RelativeSource={RelativeSource AncestorType=UserControl}}" Click="btn2_Click">
+                <StackPanel Orientation="Horizontal" Margin="15 0">
+                    <Icon:PackIconMaterial Kind="Magnify"  VerticalAlignment="Center"/>
+                    <TextBlock Text="  조회"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btn3" Style="{StaticResource ToolbarBtn}"
+                   IsEnabled="{Binding ButtonStates[3], RelativeSource={RelativeSource AncestorType=UserControl}}" Click="btn3_Click">
+                <StackPanel Orientation="Horizontal" Margin="15 0">
+                    <Icon:PackIconMaterial Kind="ContentSave"  VerticalAlignment="Center"/>
+                    <TextBlock Text="  저장"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btn4" Style="{StaticResource ToolbarBtn}"
+                   IsEnabled="{Binding ButtonStates[4], RelativeSource={RelativeSource AncestorType=UserControl}}" Click="btn4_Click">
+                <StackPanel Orientation="Horizontal" Margin="15 0">
+                    <Icon:PackIconMaterial Kind="Cancel"  VerticalAlignment="Center"/>
+                    <TextBlock Text="  취소"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btn5" Style="{StaticResource ToolbarBtn}"
+                    IsEnabled="{Binding ButtonStates[5], RelativeSource={RelativeSource AncestorType=UserControl}}" Click="btn5_Click">
+                <StackPanel Orientation="Horizontal" Margin="15 0">
+                    <Icon:PackIconMaterial Kind="Delete"  VerticalAlignment="Center"/>
+                    <TextBlock Text="  삭제"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

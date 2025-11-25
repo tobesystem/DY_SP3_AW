@@ -1,0 +1,87 @@
+﻿<Window x:Class="dayouAWSWh2.View.winLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dayouAWSWh2.View"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="winLogin" Height="514" Width="390" WindowStartupLocation="CenterScreen" WindowStyle="None" Topmost="True" Background="Transparent" AllowsTransparency="True" KeyDown="Window_KeyDown">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="0.85*"/>
+                        <RowDefinition Height="0.15*"/>
+                    </Grid.RowDefinitions>
+        <Border Grid.Row="0" Background="#6741D9" Margin="0,0,0,0" BorderBrush="LightGray" BorderThickness="0.5"  CornerRadius="20,20,0,0">
+                        <Label Content="대유에이텍 자동창고 관리 로그인" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12" FontFamily="Mongolian Baiti" FontWeight="Bold"/>
+                    </Border>
+        <Icon:PackIconMaterial Grid.Row="0" x:Name="icClose" Kind="CloseThick"  VerticalAlignment="Center" Width="10" Foreground="White" Margin="360 0 0 0" Cursor="Hand" MouseLeftButtonDown="icClose_MouseLeftButtonDown" />
+        <Border Grid.Row="1" BorderBrush="LightGray" BorderThickness="1,0,1,0">
+                    <Grid Grid.Row="1" Background="white">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.2*"/>
+                            <RowDefinition Height="0.7*"/>
+                            <RowDefinition Height="0.4*"/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0" Source="../Images/대유에이텍 로고.png" Stretch="Uniform" Width="150" Height="28" Margin="0 10 0 0" />
+                        <Image Grid.Row ="1" Source="../Images/loginImage.png" Stretch="Fill"  Margin="0 0 0 0" />
+                        <Border Grid.Row="2"  BorderBrush="LightGray" BorderThickness="0 0 0 1">
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.1*"/>
+                                    <RowDefinition Height="0.3*"/>
+                                    <RowDefinition Height="0.3*"/>
+                                    <RowDefinition Height="0.2*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.3*"/>
+                                    <ColumnDefinition Width="0.7*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Border Grid.Row="1" Grid.Column="0">
+                                    <Label Content="로그인명" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#A4AAB0" FontWeight="Bold"/>
+                                </Border>
+                                <Border Grid.Row="1" Grid.Column="1" Margin="10,5,30,5" BorderBrush="Gray" BorderThickness="1" CornerRadius="2">
+                                    <TextBox x:Name="txtId" Style="{StaticResource textBoxStyle}" BorderBrush="Transparent" VerticalAlignment="Center" Margin="5" />
+                                </Border>
+
+                                <Border Grid.Row="2" Grid.Column="0">
+                                    <Label Content="비밀번호" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="#A4AAB0" FontWeight="Bold"/>
+                                </Border>
+                                <Border Grid.Row="2" Grid.Column="1" Margin="10,5,30,5" BorderBrush="Gray" BorderThickness="1" CornerRadius="2">
+                                 <PasswordBox x:Name="txtPwd"  Style="{StaticResource passWordBoxStyle}" BorderBrush="Transparent" VerticalAlignment="Center" Margin="5" GotFocus="txtPwd_GotFocus" PreviewKeyDown="txtPwd_PreviewKeyDown"/>
+                                </Border>
+                                <Border Grid.Row="3" Grid.Column="0">
+                                 <CheckBox x:Name="ckCode" Content="코드저장"  Style="{StaticResource checkBoxStyle}"  Margin="25,0,0,0" />
+                                </Border>
+                                <Border Grid.Row="3" Grid.Column="1" Margin="10,0,0,0" >
+                                    <Label x:Name="lbError" Content="" Foreground="Red" FontSize="12"/>
+                                </Border>
+                    </Grid>
+                        </Border>
+
+
+               </Grid>
+                </Border>
+
+                <Border Grid.Row="2" Background="white" BorderBrush="LightGray" BorderThickness="1,0,1,1" CornerRadius="0,0,20,20" >
+                    <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="btnLogin" Style="{StaticResource LoginButton}" Margin="10,15,5,15" Click="btnLogin_Click">
+                            <StackPanel Orientation="Horizontal" Margin="15 0">
+                                <Icon:PackIconMaterial Kind="Login"  VerticalAlignment="Center"/>
+                                <TextBlock Text="  로그인" FontWeight="Bold" />
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="btnCancel" Style="{StaticResource CancelButton}" Margin="5,15,10,15" Click="btnCancel_Click">
+                            <StackPanel Orientation="Horizontal" Margin="15 0">
+                                <Icon:PackIconMaterial Kind="Cancel"  VerticalAlignment="Center"/>
+                                <TextBlock Text="  취소" FontWeight="Bold"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </Border>
+                </Grid>
+
+</Window>

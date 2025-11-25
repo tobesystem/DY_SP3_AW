@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8E651832-DF77-49B7-BE60-8EDF37C96B97}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>dayouAWSWh2</RootNamespace>
+    <AssemblyName>dayouAWSWh2</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ControlzEx, Version=4.0.0.0, Culture=neutral, PublicKeyToken=69f1c32f803d307e, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.4.4.0\lib\net462\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=2.0.0.0, Culture=neutral, PublicKeyToken=51482d6f650b2b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.2.4.10\lib\net47\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.Core.5.1.0\lib\net47\MahApps.Metro.IconPacks.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Fontaudio, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.Fontaudio.5.1.0\lib\net47\MahApps.Metro.IconPacks.Fontaudio.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Fontisto, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.Fontisto.5.1.0\lib\net47\MahApps.Metro.IconPacks.Fontisto.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.JamIcons, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.JamIcons.5.1.0\lib\net47\MahApps.Metro.IconPacks.JamIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Lucide, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.Lucide.5.1.0\lib\net47\MahApps.Metro.IconPacks.Lucide.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Material, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.Material.5.1.0\lib\net47\MahApps.Metro.IconPacks.Material.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.MaterialDesign, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.MaterialDesign.5.1.0\lib\net47\MahApps.Metro.IconPacks.MaterialDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.MaterialLight, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.MaterialLight.5.1.0\lib\net47\MahApps.Metro.IconPacks.MaterialLight.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.MemoryIcons, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.MemoryIcons.5.1.0\lib\net47\MahApps.Metro.IconPacks.MemoryIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Microns, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.Microns.5.1.0\lib\net47\MahApps.Metro.IconPacks.Microns.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Modern, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.Modern.5.1.0\lib\net47\MahApps.Metro.IconPacks.Modern.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Octicons, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.Octicons.5.1.0\lib\net47\MahApps.Metro.IconPacks.Octicons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.PhosphorIcons, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.PhosphorIcons.5.1.0\lib\net47\MahApps.Metro.IconPacks.PhosphorIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.PicolIcons, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.PicolIcons.5.1.0\lib\net47\MahApps.Metro.IconPacks.PicolIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.PixelartIcons, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.PixelartIcons.5.1.0\lib\net47\MahApps.Metro.IconPacks.PixelartIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.RadixIcons, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.RadixIcons.5.1.0\lib\net47\MahApps.Metro.IconPacks.RadixIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.RemixIcon, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.RemixIcon.5.1.0\lib\net47\MahApps.Metro.IconPacks.RemixIcon.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.RPGAwesome, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.RPGAwesome.5.1.0\lib\net47\MahApps.Metro.IconPacks.RPGAwesome.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.SimpleIcons, Version=5.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.SimpleIcons.5.1.0\lib\net47\MahApps.Metro.IconPacks.SimpleIcons.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=4.7.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.7.25103.5738\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=4.7.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.7.25103.5738\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=4.7.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.7.25103.5738\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=4.7.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.7.25103.5738\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=4.7.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.4.7.25103.5738\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Class\cAlarmItem.cs" />
+    <Compile Include="Class\cAlcItem.cs" />
+    <Compile Include="Class\cAlcList.cs" />
+    <Compile Include="Class\cArrowItem.cs" />
+    <Compile Include="Class\cArrowList.cs" />
+    <Compile Include="Class\cBcrrItem.cs" />
+    <Compile Include="Class\cBcrrList.cs" />
+    <Compile Include="Class\cCell.cs" />
+    <Compile Include="Class\cCellInfo.cs" />
+    <Compile Include="Class\cCellInfoList.cs" />
+    <Compile Include="Class\cCellList.cs" />
+    <Compile Include="Class\cCodeStockItem.cs" />
+    <Compile Include="Class\cCodeStockItemList.cs" />
+    <Compile Include="Class\cCommonItem.cs" />
+    <Compile Include="Class\cCommonItemList.cs" />
+    <Compile Include="Class\cComStatus.cs" />
+    <Compile Include="Class\cCvc.cs" />
+    <Compile Include="Class\cCvcList.cs" />
+    <Compile Include="Class\cDateStockItem.cs" />
+    <Compile Include="Class\cDateStockItemList.cs" />
+    <Compile Include="Class\cErrorItem.cs" />
+    <Compile Include="Class\cErrorItemList.cs" />
+    <Compile Include="Class\cHostItem.cs" />
+    <Compile Include="Class\cHostItemList.cs" />
+    <Compile Include="Class\cHostProdItem.cs" />
+    <Compile Include="Class\cLoadItemPerfItem.cs" />
+    <Compile Include="Class\cLoadItemPerfItemList.cs" />
+    <Compile Include="Class\cLoadPerfItem.cs" />
+    <Compile Include="Class\cLoadPerfItemList.cs" />
+    <Compile Include="Class\cLocStockItem.cs" />
+    <Compile Include="Class\cLocStockItemList.cs" />
+    <Compile Include="Class\cLoginItem.cs" />
+    <Compile Include="Class\cManagerOutItem.cs" />
+    <Compile Include="Class\cManagerOutItemList.cs" />
+    <Compile Include="Class\cManualOutItem.cs" />
+    <Compile Include="Class\cManualOutItemList.cs" />
+    <Compile Include="Class\cMessage.cs" />
+    <Compile Include="Class\cOpItem.cs" />
+    <Compile Include="Class\cOpList.cs" />
+    <Compile Include="Class\cOrderWaitItem.cs" />
+    <Compile Include="Class\cOrderWaitItemList.cs" />
+    <Compile Include="Class\cPalletItem.cs" />
+    <Compile Include="Class\cPalletItemList.cs" />
+    <Compile Include="Class\cPDAWmsOutItem.cs" />
+    <Compile Include="Class\cPDAWmsOutList.cs" />
+    <Compile Include="Class\cProdItem.cs" />
+    <Compile Include="Class\cProdItemList.cs" />
+    <Compile Include="Class\cRFIDItem.cs" />
+    <Compile Include="Class\cRFIDItemList.cs" />
+    <Compile Include="Class\cSccItem.cs" />
+    <Compile Include="Class\cSccList.cs" />
+    <Compile Include="Class\cStatusItem.cs" />
+    <Compile Include="Class\cStatusItemList.cs" />
+    <Compile Include="Class\cSccScioItem.cs" />
+    <Compile Include="Class\cSccScioList.cs" />
+    <Compile Include="Class\cTimeStockItem.cs" />
+    <Compile Include="Class\cTimeStockItemList.cs" />
+    <Compile Include="Class\cTrack.cs" />
+    <Compile Include="Class\cTotalJobItem.cs" />
+    <Compile Include="Class\cTotalJobItemList.cs" />
+    <Compile Include="Class\cTrackList.cs" />
+    <Compile Include="Class\cUserItem.cs" />
+    <Compile Include="Class\cUserItemList.cs" />
+    <Compile Include="Class\cWmsInItem.cs" />
+    <Compile Include="Class\cWmsInItemList.cs" />
+    <Compile Include="Class\cWmsInResultItem.cs" />
+    <Compile Include="Class\cWmsInResultItemList.cs" />
+    <Compile Include="Class\cWmsOutItem.cs" />
+    <Compile Include="Class\cWmsOutItemList.cs" />
+    <Compile Include="Class\cWmsOutResultItem.cs" />
+    <Compile Include="Class\cWmsOutResultItemList.cs" />
+    <Compile Include="Data\cAlarmData.cs" />
+    <Compile Include="Data\cArrowData.cs" />
+    <Compile Include="Data\cBcrrData.cs" />
+    <Compile Include="Data\cCellData.cs" />
+    <Compile Include="Data\cComData.cs" />
+    <Compile Include="Data\cCommonData.cs" />
+    <Compile Include="Data\cCvcData.cs" />
+    <Compile Include="Data\cErrorData.cs" />
+    <Compile Include="Data\cHostProdData.cs" />
+    <Compile Include="Data\cHostData.cs" />
+    <Compile Include="Data\cLoginData.cs" />
+    <Compile Include="Data\cManagerOutData.cs" />
+    <Compile Include="Data\cManualOutData.cs" />
+    <Compile Include="Data\cOpData.cs" />
+    <Compile Include="Data\cOrderWaitData.cs" />
+    <Compile Include="Data\cPalletData.cs" />
+    <Compile Include="Data\cProdData.cs" />
+    <Compile Include="Data\cRFIDData.cs" />
+    <Compile Include="Data\cSccData.cs" />
+    <Compile Include="Data\cStatusData.cs" />
+    <Compile Include="Data\cStockData.cs" />
+    <Compile Include="Data\cTrackData.cs" />
+    <Compile Include="Data\cUserData.cs" />
+    <Compile Include="Data\cWmsData.cs" />
+    <Compile Include="Server\cServerInfo.cs" />
+    <Compile Include="UC\ucCell.xaml.cs">
+      <DependentUpon>ucCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucCellMonitor.xaml.cs">
+      <DependentUpon>ucCellMonitor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucCellSp3.xaml.cs">
+      <DependentUpon>ucCellSp3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucCodeStock.xaml.cs">
+      <DependentUpon>ucCodeStock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucComboBoxArea.xaml.cs">
+      <DependentUpon>ucComboBoxArea.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucDateStock.xaml.cs">
+      <DependentUpon>ucDateStock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucEquipMonitor.xaml.cs">
+      <DependentUpon>ucEquipMonitor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucEquipMonitorSP3.xaml.cs">
+      <DependentUpon>ucEquipMonitorSP3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucError.xaml.cs">
+      <DependentUpon>ucError.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucErrorHistory.xaml.cs">
+      <DependentUpon>ucErrorHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucHost.xaml.cs">
+      <DependentUpon>ucHost.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucHostOut.xaml.cs">
+      <DependentUpon>ucHostOut.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucHostOutSP3.xaml.cs">
+      <DependentUpon>ucHostOutSP3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucHostOutTab.xaml.cs">
+      <DependentUpon>ucHostOutTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucHostResult.xaml.cs">
+      <DependentUpon>ucHostResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucLoadItemPerf.xaml.cs">
+      <DependentUpon>ucLoadItemPerf.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucLoadPerf.xaml.cs">
+      <DependentUpon>ucLoadPerf.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucLocStock.xaml.cs">
+      <DependentUpon>ucLocStock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucManagerOut.xaml.cs">
+      <DependentUpon>ucManagerOut.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucManualOut.xaml.cs">
+      <DependentUpon>ucManualOut.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucOrderWait.xaml.cs">
+      <DependentUpon>ucOrderWait.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucPallet.xaml.cs">
+      <DependentUpon>ucPallet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucPDAOut.xaml.cs">
+      <DependentUpon>ucPDAOut.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucPDAOutHist.xaml.cs">
+      <DependentUpon>ucPDAOutHist.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucProd.xaml.cs">
+      <DependentUpon>ucProd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucProdResult.xaml.cs">
+      <DependentUpon>ucProdResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucSystemSetting.xaml.cs">
+      <DependentUpon>ucSystemSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucSystemSettingSP3.xaml.cs">
+      <DependentUpon>ucSystemSettingSP3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucSystemSettingTab.xaml.cs">
+      <DependentUpon>ucSystemSettingTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucTimeStock.xaml.cs">
+      <DependentUpon>ucTimeStock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucToolbarBtn.xaml.cs">
+      <DependentUpon>ucToolbarBtn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucTotalJob.xaml.cs">
+      <DependentUpon>ucTotalJob.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucUser.xaml.cs">
+      <DependentUpon>ucUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucWmsIn.xaml.cs">
+      <DependentUpon>ucWmsIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucWmsInOutGet.xaml.cs">
+      <DependentUpon>ucWmsInOutGet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucWmsInOutGetSP3.xaml.cs">
+      <DependentUpon>ucWmsInOutGetSP3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucWmsInOutGetTab.xaml.cs">
+      <DependentUpon>ucWmsInOutGetTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucWmsInResult.xaml.cs">
+      <DependentUpon>ucWmsInResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucWmsInSP3.xaml.cs">
+      <DependentUpon>ucWmsInSP3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucWmsInTab.xaml.cs">
+      <DependentUpon>ucWmsInTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucWmsOut.xaml.cs">
+      <DependentUpon>ucWmsOut.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucWmsOutResult.xaml.cs">
+      <DependentUpon>ucWmsOutResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucWmsOutSP3.xaml.cs">
+      <DependentUpon>ucWmsOutSP3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucWmsOutTab.xaml.cs">
+      <DependentUpon>ucWmsOutTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\winAlarm.xaml.cs">
+      <DependentUpon>winAlarm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\winAlcUpdate.xaml.cs">
+      <DependentUpon>winAlcUpdate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\winErrorPopup.xaml.cs">
+      <DependentUpon>winErrorPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\winHostAdd.xaml.cs">
+      <DependentUpon>winHostAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\winLogin.xaml.cs">
+      <DependentUpon>winLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\winPalletPopup.xaml.cs">
+      <DependentUpon>winPalletPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\winPopUp.xaml.cs">
+      <DependentUpon>winPopUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WinSet.xaml.cs">
+      <DependentUpon>WinSet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\winUserPopup.xaml.cs">
+      <DependentUpon>winUserPopup.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="UC\ucCell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucCellMonitor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucCellSp3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucCodeStock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucComboBoxArea.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucDateStock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucEquipMonitor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucEquipMonitorSP3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucError.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucErrorHistory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucHost.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucHostOut.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucHostOutSP3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucHostOutTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucHostResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucLoadItemPerf.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucLoadPerf.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucLocStock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucManagerOut.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucManualOut.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucOrderWait.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucPallet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucPDAOut.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucPDAOutHist.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucProd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucProdResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucSystemSetting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucSystemSettingSP3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucSystemSettingTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucTimeStock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucToolbarBtn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucTotalJob.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucWmsIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucWmsInOutGet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucWmsInOutGetSP3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucWmsInOutGetTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucWmsInResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucWmsInSP3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucWmsInTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucWmsOut.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucWmsOutResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucWmsOutSP3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UC\ucWmsOutTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\winAlarm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\winAlcUpdate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\winErrorPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\winHostAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\winLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\winPalletPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\winPopUp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WinSet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\winUserPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Resource Include="Resources\Fonts\PretendardVariable.ttf" />
+    <Resource Include="Resources\Fonts\Pretendard-Black.otf" />
+    <Resource Include="Resources\Fonts\Pretendard-Bold.otf" />
+    <Resource Include="Resources\Fonts\Pretendard-ExtraBold.otf" />
+    <Resource Include="Resources\Fonts\Pretendard-ExtraLight.otf" />
+    <Resource Include="Resources\Fonts\Pretendard-Light.otf" />
+    <Resource Include="Resources\Fonts\Pretendard-Medium.otf" />
+    <Resource Include="Resources\Fonts\Pretendard-Regular.otf" />
+    <Resource Include="Resources\Fonts\Pretendard-SemiBold.otf" />
+    <Resource Include="Resources\Fonts\Pretendard-Thin.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\대유에이텍 로고-Photoroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\아래화살표흰.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\위화살표흰.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\대유에이텍 로고.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\loginImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\아래.png" />
+    <Resource Include="Images\위.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\아래화살표검.png" />
+    <Resource Include="Images\위화살표검.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\경광등.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\긴화살표.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\긴화살표4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\긴화살표2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\긴화살표3.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
