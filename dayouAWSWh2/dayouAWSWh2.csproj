@@ -257,9 +257,6 @@
     <Compile Include="UC\ucDateStock.xaml.cs">
       <DependentUpon>ucDateStock.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UC\ucEquipMonitor.xaml.cs">
-      <DependentUpon>ucEquipMonitor.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UC\ucEquipMonitorSP3.xaml.cs">
       <DependentUpon>ucEquipMonitorSP3.xaml</DependentUpon>
     </Compile>
@@ -431,10 +428,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UC\ucDateStock.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="UC\ucEquipMonitor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -66,47 +66,6 @@ namespace dayouAWSWh2.Data
             return item;
         }
 
-        //SCIO 정보 조회(SP3)
-        public cComStatus Wh2ComStatusGet()
-        {
-            cComStatus item = new cComStatus();
-            try
-            {
-                using (SqlConnection connect = new SqlConnection(_conn))
-                {
-                    SqlCommand cmd = new SqlCommand("SP_CS_COM_STATUS_WH2", connect);
-
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-
-
-                    connect.Open();
-
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataSet ds = new DataSet();
-
-                    adapter.Fill(ds);
-
-                    DataTable dt = ds.Tables[0];
-
-                    if (dt.Rows.Count > 0)
-                    {
-                        DataRow row = dt.Rows[0];
-
-                        item.CVC = row["CVC"].ToString();
-                        item.SCC = row["SCC"].ToString();
-                        item.BR1 = row["BR1"].ToString();
-                        item.BR2 = row["BR2"].ToString();
-                    }
-
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-            }
-
-            return item;
-        }
 
     }
 }

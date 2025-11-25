@@ -236,12 +236,6 @@ namespace dayouAWSWh2
         {
             AddTab("에러코드 관리", new ucError());
         }
-
-        private void TrackingMonitor(object sender, RoutedEventArgs e)
-        {
-            AddTab("SW 설비 모니터링", new ucEquipMonitor());
-        }
-
         private void TrackingMonitorSP3(object sender, RoutedEventArgs e)
         {
             AddTab("SP3 설비 모니터링", new ucEquipMonitorSP3());

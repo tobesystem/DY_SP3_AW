@@ -203,8 +203,7 @@
                     </ToggleButton>
 
                     <StackPanel x:Name="MonitoringSubMenu" Visibility="Collapsed" Orientation="Vertical" Background="#FF748FFC">
-                        <Button Content="SW 설비 모니터링" Click="TrackingMonitor" Style="{StaticResource SideBtn}" Cursor="Hand"/>
-                        <Button Content="SP3 설비 모니터링" Click="TrackingMonitorSP3" Style="{StaticResource SideBtn}" Cursor="Hand"/>
+                        <Button Content="설비 모니터링" Click="TrackingMonitorSP3" Style="{StaticResource SideBtn}" Cursor="Hand"/>
                         <Button Content="설비에러 조회" Click="ErrorHistory" Style="{StaticResource SideBtn}" Cursor="Hand"/>
                     </StackPanel>
 

@@ -169,7 +169,7 @@ namespace dayouAWSWh2.UC
                 var result = await Task.Run(() =>
                 {
                     // 로컬 변수로 다 받아오기
-                    var comStatus = _comData.Wh2ComStatusGet();
+                    var comStatus = _comData.ComStatusGet();
                     var list = _data.Wh2CvcGet();
                     var sccLoc1 = _sccData.GetSccData(3);
                     var sccLoc2 = _sccData.GetSccData(4);
