@@ -26,7 +26,6 @@ namespace dayouAWSWh2.UC
         cCellList _list = new cCellList();
         cCellData _data = new cCellData();
 
-        cCell _item = new cCell();
 
         // 이벤트 정의
         public event Action<cCell> StatusClicked;

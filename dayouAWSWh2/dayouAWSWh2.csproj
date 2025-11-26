@@ -239,9 +239,6 @@
     <Compile Include="Data\cUserData.cs" />
     <Compile Include="Data\cWmsData.cs" />
     <Compile Include="Server\cServerInfo.cs" />
-    <Compile Include="UC\ucCell.xaml.cs">
-      <DependentUpon>ucCell.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UC\ucCellMonitor.xaml.cs">
       <DependentUpon>ucCellMonitor.xaml</DependentUpon>
     </Compile>
@@ -377,10 +374,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="UC\ucCell.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="UC\ucCellMonitor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

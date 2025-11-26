@@ -59,12 +59,6 @@ namespace dayouAWSWh2.UC
             // 툴바 버튼 클릭 이벤트
             ucToolbarBtn.Button3Clicked += ucToolbarBtn_Button3Clicked;
 
-            // 유저컨트롤 클릭 이벤트
-            var userControls = new[] { ucCell01, ucCell02, ucCell03, ucCell04 };
-            foreach (var userControl in userControls)
-            {
-                userControl.ButtonClicked += ucCell_ButtonClicked;
-            }
             var userControls2 = new[] { ucCell05, ucCell06, ucCell07, ucCell08 };
             foreach (var userControl in userControls2)
             {
@@ -88,13 +82,6 @@ namespace dayouAWSWh2.UC
             var frList = _cellLst.Select(item => item.FRCODE).ToList();
             cbFrgubun.ItemsSource = frList;
 
-            // ucCell 인스턴스를 찾고 이벤트 구독 (SW)
-            for (int i = 1; i <= 4; i++)
-            {
-                var cell = FindName($"ucCell0{i}") as ucCell;
-                if (cell != null)
-                    cell.StatusClicked += UpdateTextBlock;
-            }
 
             // ucCell 인스턴스를 찾고 이벤트 구독 (SP3)
             for (int i = 5; i <= 8; i++)
@@ -147,10 +134,6 @@ namespace dayouAWSWh2.UC
         {
             // 동시에 돌려도 되면 (병렬)
             await Task.WhenAll(
-                ucCell01.SetRowAsync("01"),
-                ucCell02.SetRowAsync("02"),
-                ucCell03.SetRowAsync("03"),
-                ucCell04.SetRowAsync("04"),
                 ucCell05.SetRowAsync("05"),
                 ucCell06.SetRowAsync("06"),
                 ucCell07.SetRowAsync("07"),
