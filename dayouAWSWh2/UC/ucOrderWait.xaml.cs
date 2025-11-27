@@ -68,7 +68,7 @@ namespace dayouAWSWh2.UC
 
         private void doSearch()
         {
-            _OrderWaitlist = _OrderWaitdata.OrderWaitGet(cbCarCode.Text);
+            _OrderWaitlist = _OrderWaitdata.OrderWaitGet();
             OrderWaitDataGrid.ItemsSource = _OrderWaitlist;
         }
 
@@ -79,9 +79,9 @@ namespace dayouAWSWh2.UC
             {
                 if (MessageBox.Show("서열출고에 문제가 생길 수 있습니다. 확인하셨다면 '예'를 눌러주세요", "삭제", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
                 {
-                    _OrderWaitdata.deleteOrderWait(_OrderWaitlist[row].LOT_NO1.ToString(), cbCarCode.Text);
+                    _OrderWaitdata.deleteOrderWait(_OrderWaitlist[row].LOT_NO1.ToString());
 
-                    _OrderWaitlist = _OrderWaitdata.OrderWaitGet(cbCarCode.Text);
+                    _OrderWaitlist = _OrderWaitdata.OrderWaitGet();
                     OrderWaitDataGrid.ItemsSource = _OrderWaitlist;
                 }
                 else

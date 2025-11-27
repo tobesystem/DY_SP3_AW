@@ -21,7 +21,7 @@ namespace dayouAWSWh2.Data
         }
 
         //서열출고 대기 조회
-        public cOrderWaitItemList OrderWaitGet(string carCode)
+        public cOrderWaitItemList OrderWaitGet()
         {
             cOrderWaitItemList list = new cOrderWaitItemList();
 
@@ -29,15 +29,7 @@ namespace dayouAWSWh2.Data
             {
                 using (SqlConnection connect = new SqlConnection(_conn))
                 {
-                    SqlCommand cmd = connect.CreateCommand();
-                    if (carCode == "SW")
-                    {
-                        cmd = new SqlCommand("SP_CS_ORDER_WAIT_GET", connect);
-                    }
-                    else if (carCode == "SP3")
-                    {
-                        cmd = new SqlCommand("SP_CS_ORDER_WAIT_GET_WH2", connect);
-                    }
+                    SqlCommand cmd = new SqlCommand("SP_CS_ORDER_WAIT_GET", connect);
 
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
@@ -93,21 +85,14 @@ namespace dayouAWSWh2.Data
             return list;
         }
 
-        public void deleteOrderWait(string lot_no, string carCode)
+        public void deleteOrderWait(string lot_no)
         {
             try
             {
                 using (SqlConnection connect = new SqlConnection(_conn))
                 {
-                    SqlCommand cmd = connect.CreateCommand();
-                    if (carCode == "SW")
-                    {
-                        cmd = new SqlCommand("SP_CS_ORDER_WAIT_DELETE", connect);
-                    }
-                    else if (carCode == "SP3")
-                    {
-                        cmd = new SqlCommand("SP_CS_ORDER_WAIT_DELETE_WH2", connect);
-                    }
+                    SqlCommand cmd = new SqlCommand("SP_CS_ORDER_WAIT_DELETE", connect);
+                  
                     cmd.Parameters.Add(new SqlParameter("LOT_NO", lot_no));
 
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
