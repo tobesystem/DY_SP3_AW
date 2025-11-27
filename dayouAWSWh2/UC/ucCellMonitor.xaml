@@ -37,8 +37,15 @@
                         <RowDefinition Height="40"/>
                     </Grid.RowDefinitions>
 
+                    <Border Grid.Column="0" Grid.Row="0" Grid.RowSpan="5" Opacity="0.85" Background="#FFECECEC"
+      BorderBrush="#FFCCCCCB" BorderThickness="3" CornerRadius="10" Margin="30">
+                        <Border.Effect>
+                            <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="1"/>
+                        </Border.Effect>
+                        <TextBlock Text="SW" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFADADAD"/>
+                    </Border>
 
-                        <Grid Grid.Column="1" Grid.Row="0" Margin="10 9 0 9" >
+                    <Grid Grid.Column="1" Grid.Row="0" Margin="10 9 0 9" >
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="40"/>
                                 <ColumnDefinition Width="30"/>
@@ -175,9 +182,9 @@
                 </Grid>
 
                 <!--셀정보-->
-                <Grid Grid.Column="1" Margin="25 5" SnapsToDevicePixels="True">
+                <Grid Grid.Column="1" Margin="25 20 25 5" SnapsToDevicePixels="True">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="100"/>
                         <RowDefinition Height="500"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
@@ -310,7 +317,7 @@
                     </Grid>
 
                     <!--셀 사용현황-->
-                    <Grid Grid.Row="2" Margin="0 0 0 0">
+                    <Grid Grid.Row="2" Margin="0 0 0 0" VerticalAlignment="Bottom">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="22"/>
                             <RowDefinition Height="*"/>

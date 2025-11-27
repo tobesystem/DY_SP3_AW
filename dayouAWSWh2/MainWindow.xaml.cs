@@ -238,7 +238,7 @@ namespace dayouAWSWh2
         }
         private void TrackingMonitorSP3(object sender, RoutedEventArgs e)
         {
-            AddTab("SP3 설비 모니터링", new ucEquipMonitorSP3());
+            AddTab("설비 모니터링", new ucEquipMonitorSP3());
         }
 
         private void ErrorHistory(object sender, RoutedEventArgs e)

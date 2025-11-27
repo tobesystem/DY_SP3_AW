@@ -41,7 +41,6 @@ namespace dayouAWSWh2.UC
             InitializeComponent();
 
             Init();
-
         }
 
         private void Init()
@@ -176,11 +175,6 @@ namespace dayouAWSWh2.UC
         private void ApplyTextBlockValues(cCell item)
         {
             _cItem = item;
-
-            // ALC 코드 가져옴
-            _cellAlcLst = _data.GetAlcCodeBank(_cItem.ID_BANK);
-            var alcList = _cellAlcLst.Select(items => items.ALC).ToList();
-            cbAlc.ItemsSource = alcList;
 
             if (tbBank.Text != _cItem.ID_BANK) tbBank.Text = _cItem.ID_BANK;
             if (tbBay.Text != _cItem.ID_BAY) tbBay.Text = _cItem.ID_BAY;

@@ -433,7 +433,6 @@ namespace dayouAWSWh2.UC
             else if (match.CARGO_VALUE == "1" && match.DATA_VALUE == "0")
             {
                 tag = "데이터[무] 화물[유]";
-                //  UpdateCascadeHighlight(processed, match);
             }
             else if (match.CARGO_VALUE == "0" && match.DATA_VALUE == "1")
             {
@@ -599,11 +598,6 @@ namespace dayouAWSWh2.UC
         {
             txtHostDate.Text = _hostItem.HOST_CR_DATE;
             txtHostOption.Text = _hostItem.HOST_OPTION == 1 ? "정상" : "에러";
-        }
-
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
-        {
-          //  _timer.Start();
         }
 
         private void btnScClear_Click(object sender, RoutedEventArgs e)
@@ -918,12 +912,12 @@ namespace dayouAWSWh2.UC
 
         private void btnReBcr_Click(object sender, RoutedEventArgs e)
         {
-            _bcrData.AddCommand(5, "0", "");
+            _bcrData.AddCommand(1, "0", "");
         }
 
         private void btnReBcrOut_Click(object sender, RoutedEventArgs e)
         {
-            _bcrData.AddCommand(6, "0", "");
+            _bcrData.AddCommand(2, "0", "");
         }
 
         private void bdBcrIn_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -1077,11 +1071,6 @@ namespace dayouAWSWh2.UC
             }
         }
 
-        private void UserControl_Unloaded(object sender, RoutedEventArgs e)
-        {
-            //_timer.Stop();
-        }
-
 
         private void DoClear()
         {
@@ -1119,5 +1108,6 @@ namespace dayouAWSWh2.UC
 
             isTxtBuffTargetSelected = false;
         }
+
     }
 }

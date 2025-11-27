@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:dayouAWSWh2.UC"
             mc:Ignorable="d" 
             d:DesignWidth="1720" d:DesignHeight="950"   
-            HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Loaded="UserControl_Loaded" Unloaded="UserControl_Unloaded" >
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
     <Border Padding="8">
         <Grid>
             <Grid.RowDefinitions>

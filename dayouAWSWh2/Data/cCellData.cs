@@ -281,45 +281,6 @@ namespace dayouAWSWh2.Data
             return list;
         }
 
-        // 차종별 적재코드 가져오기
-        public cCellList GetAlcCodeBank(string ID_BANK)
-        {
-            cCellList list = new cCellList();
-
-            try
-            {
-                using (SqlConnection connect = new SqlConnection(_conn))
-                {
-                    SqlCommand cmd = new SqlCommand("SP_CS_ALC_CODE_GET", connect);
-
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-
-                    cmd.Parameters.Add(new SqlParameter("ID_BANK", ID_BANK));
-
-                    connect.Open();
-
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    DataSet ds = new DataSet();
-
-                    adapter.Fill(ds);
-
-                    DataTable dt = ds.Tables[0];
-                    foreach (DataRow row in dt.Rows)
-                    {
-                        list.Add(new cCell
-                        {
-                            ALC = row["ALC"].ToString(),
-                        });
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.ToString());
-            }
-
-            return list;
-        }
 
     }
 }
