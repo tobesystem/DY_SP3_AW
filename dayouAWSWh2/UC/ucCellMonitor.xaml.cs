@@ -219,13 +219,14 @@ namespace dayouAWSWh2.UC
                 // 마지막 행인지 확인
                 if (e.Row.GetIndex() == dataGrid.Items.Count - 1)
                 {
-                    e.Row.Foreground = Brushes.Red;
-                }
-                // 5번째(인덱스 4), 10번째(인덱스 9) 행 색상
-                else if (rowIndex == 4 || rowIndex == 9)
-                {
+                  //  e.Row.Foreground = Brushes.Red;
                     e.Row.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF4C6EF5"));
                 }
+                // 5번째(인덱스 4), 10번째(인덱스 9) 행 색상
+             /*   else if (rowIndex == 4 || rowIndex == 9)
+                {
+                    e.Row.Foreground = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF4C6EF5"));
+                }*/
             }
         }
 

@@ -23,7 +23,11 @@
                     <ColumnDefinition Width="400"/>
                 </Grid.ColumnDefinitions>
 
-                <Grid Grid.Column="0">
+                <Grid Grid.Column="0" Margin="0 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.45*"/>
+                        <ColumnDefinition Width="0.55*"/>
+                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40"/>
                         <RowDefinition Height="*"/>
@@ -32,10 +36,6 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="40"/>
                     </Grid.RowDefinitions>
-
-
-                  
-
 
 
                         <Grid Grid.Column="1" Grid.Row="0" Margin="10 9 0 9" >
@@ -177,8 +177,8 @@
                 <!--셀정보-->
                 <Grid Grid.Column="1" Margin="25 5" SnapsToDevicePixels="True">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="90"/>
-                        <RowDefinition Height="444"/>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="500"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 

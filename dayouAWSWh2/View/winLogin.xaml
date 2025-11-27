@@ -15,7 +15,7 @@
                         <RowDefinition Height="0.15*"/>
                     </Grid.RowDefinitions>
         <Border Grid.Row="0" Background="#6741D9" Margin="0,0,0,0" BorderBrush="LightGray" BorderThickness="0.5"  CornerRadius="20,20,0,0">
-                        <Label Content="대유에이텍 자동창고 관리 로그인" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12" FontFamily="Mongolian Baiti" FontWeight="Bold"/>
+                        <Label Content="대유에이텍 SP3 자동창고 관리 로그인" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12" FontFamily="Mongolian Baiti" FontWeight="Bold"/>
                     </Border>
         <Icon:PackIconMaterial Grid.Row="0" x:Name="icClose" Kind="CloseThick"  VerticalAlignment="Center" Width="10" Foreground="White" Margin="360 0 0 0" Cursor="Hand" MouseLeftButtonDown="icClose_MouseLeftButtonDown" />
         <Border Grid.Row="1" BorderBrush="LightGray" BorderThickness="1,0,1,0">

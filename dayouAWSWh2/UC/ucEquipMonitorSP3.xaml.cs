@@ -560,7 +560,7 @@ namespace dayouAWSWh2.UC
 
             if (isTargetBgIn && !string.IsNullOrEmpty(txtPltInCode.Text))
             {
-                var item = _bcrLst.First(x => x.BCRNO == 5);
+                var item = _bcrLst.First(x => x.BCRNO == 1);
                 txtPltInCodeBcr.Text = item.PALLET_CODE;
                 bool inMatch = txtPltInCode.Text == txtPltInCodeBcr.Text;
                 bdBcrInOk.Background = new SolidColorBrush(inMatch ? Colors.Green : Colors.Red);
@@ -575,7 +575,7 @@ namespace dayouAWSWh2.UC
 
             if (isTargetBgOut && !string.IsNullOrEmpty(txtPltOutCode.Text))
             {
-                var item2 = _bcrLst.First(x => x.BCRNO == 6);
+                var item2 = _bcrLst.First(x => x.BCRNO == 2);
                 txtPltOutCodeBcr.Text = item2.PALLET_CODE;
                 bool outMatch = txtPltOutCode.Text == txtPltOutCodeBcr.Text;
                 bdBcrOutOk.Background = new SolidColorBrush(outMatch ? Colors.Green : Colors.Red);
@@ -906,12 +906,12 @@ namespace dayouAWSWh2.UC
             _bcrLst = _bcrData.BcrPltGet();
             if (txtPltInCode.Text != "")
             {
-                var item = _bcrLst.First(x => x.BCRNO == 5);
+                var item = _bcrLst.First(x => x.BCRNO == 1);
                 txtPltInCodeBcr.Text = item.PALLET_CODE;
             }
             if (txtPltOutCode.Text != "")
             {
-                var item2 = _bcrLst.First(x => x.BCRNO == 6);
+                var item2 = _bcrLst.First(x => x.BCRNO == 2);
                 txtPltOutCodeBcr.Text = item2.PALLET_CODE;
             }
         }
