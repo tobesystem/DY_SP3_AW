@@ -561,9 +561,12 @@ namespace dayouAWSWh2.UC
             {
                 var item = _bcrLst.First(x => x.BCRNO == 1);
                 txtPltInCodeBcr.Text = item.PALLET_CODE;
-                bool inMatch = txtPltInCode.Text == txtPltInCodeBcr.Text;
-                bdBcrInOk.Background = new SolidColorBrush(inMatch ? Colors.Green : Colors.Red);
-                txtBcrInOk.Text = inMatch ? "OK" : "NG";
+                if (txtPltInCodeBcr.Text != "")
+                {
+                    bool inMatch = txtPltInCode.Text == txtPltInCodeBcr.Text;
+                    bdBcrInOk.Background = new SolidColorBrush(inMatch ? Colors.Green : Colors.Red);
+                    txtBcrInOk.Text = inMatch ? "OK" : "NG";
+                }
             }
             else
             {
@@ -576,9 +579,12 @@ namespace dayouAWSWh2.UC
             {
                 var item2 = _bcrLst.First(x => x.BCRNO == 2);
                 txtPltOutCodeBcr.Text = item2.PALLET_CODE;
-                bool outMatch = txtPltOutCode.Text == txtPltOutCodeBcr.Text;
-                bdBcrOutOk.Background = new SolidColorBrush(outMatch ? Colors.Green : Colors.Red);
-                txtBcrOutOk.Text = outMatch ? "OK" : "NG";
+                if (txtPltOutCodeBcr.Text != ""){
+                    bool outMatch = txtPltOutCode.Text == txtPltOutCodeBcr.Text;
+                    bdBcrOutOk.Background = new SolidColorBrush(outMatch ? Colors.Green : Colors.Red);
+                    txtBcrOutOk.Text = outMatch ? "OK" : "NG";
+                }
+              
             }
             else
             {
