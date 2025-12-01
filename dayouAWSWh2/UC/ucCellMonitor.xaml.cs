@@ -72,7 +72,7 @@ namespace dayouAWSWh2.UC
             cbStatus.ItemsSource = statusList;
 
             // ALC 코드 가져옴
-            _cellAlcLst = _data.GetAlcCode("2");
+            _cellAlcLst = _data.GetCellStatus("2");
             var alcList = _cellAlcLst.Select(item => item.ALC).ToList();
             cbAlc.ItemsSource = alcList;
 

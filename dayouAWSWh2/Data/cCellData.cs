@@ -126,7 +126,7 @@ namespace dayouAWSWh2.Data
                         {
                             list.Add(new cCell
                             {
-                                STATUS = row["STATUS"].ToString(),
+                                ALC = row["ALC"].ToString(),
                             });
                         }
                     }
@@ -242,7 +242,7 @@ namespace dayouAWSWh2.Data
 
 
         // 셀 ALC 리스트 가져오기
-        public cCellList GetAlcCode(string TYPE)
+     /*   public cCellList GetAlcCode(string TYPE)
         {
             cCellList list = new cCellList();
 
@@ -279,7 +279,7 @@ namespace dayouAWSWh2.Data
             }
 
             return list;
-        }
+        }*/
 
 
     }

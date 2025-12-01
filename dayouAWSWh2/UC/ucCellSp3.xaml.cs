@@ -71,28 +71,7 @@ namespace dayouAWSWh2.UC
             }
         }
 
-        /*     public void setRow(string row)
-             {
-                 _row = row;
-                 _list = _data.GetCell(row);
-                 rowCnt.Text = row.Substring(1) + "열";
-
-                 // WPF의 ContentControl 컨트롤을 업데이트
-                 foreach (var item in _list)
-                 {
-                     string controlName = "c" + item.ID_CODE.Substring(2);
-                     if (!_prevStatusMap.TryGetValue(item.ID_CODE, out var prevStatus) || prevStatus != item.STATUS)
-                     {
-                         _prevStatusMap[item.ID_CODE] = item.STATUS;
-
-                         if (FindName(controlName) is ContentControl contentControl)
-                         {
-                             UpdateCell(contentControl, item);
-                         }
-                     }
-                 }
-             }*/
-
+     
         private void UpdateCell(ContentControl contentControl, cCell item)
         {
             contentControl.Style = (Style)FindResource("cellBorderSet");
