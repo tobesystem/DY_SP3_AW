@@ -87,7 +87,7 @@ namespace dayouAWSWh2.UC
                         border1.Background = new SolidColorBrush(Colors.LightGreen);
                     }
                 }
-                if (_programStatusList[i].Current_Name == "WSCC")
+                if (_programStatusList[i].Current_Name == "SCC")
                 {
                     if (_programStatusList[i].Option1 == 0)
                     {
