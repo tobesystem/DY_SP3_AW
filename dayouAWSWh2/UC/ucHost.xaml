@@ -120,15 +120,13 @@
                         <DataGridTextColumn Header="의장투입일시" IsReadOnly="True" Width="150" Binding="{Binding REPORT_SYS_DT}" ElementStyle="{StaticResource DataGridCellCenter}"/>
                         <DataGridTextColumn Header="COMMIT_NO" IsReadOnly="True" Width="100" Binding="{Binding CMT_NO}" ElementStyle="{StaticResource DataGridCellCenter}"/>
                         <DataGridTextColumn Header="의장ALC" IsReadOnly="True" Width="100" Binding="{Binding ALC_CODE}" ElementStyle="{StaticResource BoldCellStyle}"/>
-                        <DataGridTextColumn Header="도장ALC" IsReadOnly="True" Width="130" Binding="{Binding ALC_CHECK}" ElementStyle="{StaticResource BoldCellStyle}"/>
                         <DataGridTextColumn Header="BODY_NO" IsReadOnly="True" Width="130" Binding="{Binding BODY_NO}" ElementStyle="{StaticResource DataGridCellCenter}"/>
                         <DataGridTextColumn Header="지역" IsReadOnly="True" Width="130" Binding="{Binding HANGUEL_PART}" ElementStyle="{StaticResource DataGridCellCenter}"/>
                         <DataGridTextColumn Header="사양국" IsReadOnly="True" Width="130" Binding="{Binding REGION_NAME}" ElementStyle="{StaticResource DataGridCellCenter}"/>
                         <DataGridTextColumn Header="내장색" IsReadOnly="True" Width="70" Binding="{Binding INNER_COLOR}" ElementStyle="{StaticResource DataGridCellCenter}"/>
                         <DataGridTextColumn Header="차종" IsReadOnly="True" Width="70" Binding="{Binding ALC_CLASS}" ElementStyle="{StaticResource BoldCellStyle}"/>
                         <DataGridTextColumn Header="FR" IsReadOnly="True" Width="70" Binding="{Binding STOCK_FR}" ElementStyle="{StaticResource RedTextIfLackStyle}" />
-                        <DataGridTextColumn Header="R2" IsReadOnly="True" Width="70" Binding="{Binding STOCK_R2}" ElementStyle="{StaticResource RedTextIfLackStyleR2}"/>
-                        <DataGridTextColumn Header="R3" IsReadOnly="True" Width="70" Binding="{Binding STOCK_R3}" ElementStyle="{StaticResource RedTextIfLackStyleR3}"/>
+                        <DataGridTextColumn Header="RR" IsReadOnly="True" Width="70" Binding="{Binding STOCK_R2}" ElementStyle="{StaticResource RedTextIfLackStyleR2}"/>
                         <DataGridTextColumn Header="작업상태" IsReadOnly="True" Width="70" Binding="{Binding STATUS}" ElementStyle="{StaticResource DataGridCellCenter}"/>
                         <DataGridTextColumn Header="수신일자" IsReadOnly="True" Width="210" Binding="{Binding CR_DATE}" ElementStyle="{StaticResource DataGridCellCenter}"/>
 
